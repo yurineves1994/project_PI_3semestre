@@ -5,5 +5,6 @@
 <ul>
   <li>Arthur Dias dos Santos</li>
   <li>Yuri Neves Travassos</li>
+  <li>Daniel Morais</li>
 </ul>
 <h3>Venda de Artigos Japoneses</h3>
