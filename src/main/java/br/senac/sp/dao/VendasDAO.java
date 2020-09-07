@@ -15,12 +15,12 @@ import java.util.logging.Logger;
 
 public class VendasDAO {
     public static List<Vendas> getClientes() {
-        List<Vendas> listaClientes = new ArrayList();
+        List<Vendas> listaVendas = new ArrayList();
         try {
             // faz a conexao com o Banco de dados criado na pasta bd
             Connection con = ConexaoDB.obterConexao();
             //queery de requisicao do banco de dados
-            String query = "select * from cliente";
+            String query = "select valor, data_venda from venda";
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet resultado = ps.executeQuery();
 
@@ -28,7 +28,7 @@ public class VendasDAO {
             while (resultado.next()) {
                 String nome = resultado.getString("nome");
                 String email = resultado.getString("email");
-                listaVendas.add(new Vendas(nome,email));
+                listaVendas.add(new Vendas(valor, data_venda));
 
             }
         } catch (ClassNotFoundException ex) {

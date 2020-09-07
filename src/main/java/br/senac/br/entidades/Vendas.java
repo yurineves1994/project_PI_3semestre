@@ -3,9 +3,9 @@ package br.senac.br.entidades;
 
 public class Vendas {
    private int valor;
-   private int data_venda;
+   private String data_venda;
 
-    public Vendas(int valor, int data_venda) {
+    public Vendas(int valor, String data_venda) {
         this.valor = valor;
         this.data_venda = data_venda;
     }
@@ -22,11 +22,11 @@ public class Vendas {
         this.valor = valor;
     }
 
-    public int getData_venda() {
+    public String getData_venda() {
         return data_venda;
     }
 
-    public void setData_venda(int data_venda) {
+    public void setData_venda(String data_venda) {
         this.data_venda = data_venda;
     }
    
