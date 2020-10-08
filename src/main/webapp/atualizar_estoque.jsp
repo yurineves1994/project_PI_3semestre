@@ -16,7 +16,7 @@
         <div class="col-5 ">
             <img class="" src="img/logo.PNG" alt="">
         </div>
-        <div class="col-5 mt-4">
+        <div class="col-6 mt-4">
             <h1 class=" display-4 font-weight-bolder">ATUALIZAR ESTOQUE</h1>
         </div>
     </div>

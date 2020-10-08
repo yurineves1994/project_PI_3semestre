@@ -28,11 +28,11 @@
         <div class="form-group row justify-content-center">
             <div class="row col-6 justify-content-around">
                 <label class="col-1 align-self-center font-weight-bolder h3" for="senha-usuario">CPF</label>
-                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite seu CPF">
             </div>
             <div class="row col-6 justify-content-around">
                 <label class="col-1 align-self-center font-weight-bolder h3" for="senha-usuario">RG</label>
-                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite seu RG">
             </div>
         </div>
         <div class="form-group row justify-content-center">
@@ -51,12 +51,12 @@
             </div>
             <div class="row col-6 justify-content-around">
                 <label class="col-1 align-self-center font-weight-bolder h3" for="senha-usuario">TEL.</label>
-                <input class="form-control-lg col-9" type="email" id="telefone" placeholder="Digite sua senha">
+                <input class="form-control-lg col-9" type="email" id="telefone" placeholder="Digite seu telefone">
             </div>
         </div>
         <div class="form-group row justify-content-center">
             <label class="col-1 align-self-center font-weight-bolder h3" for="email-usuario">E-MAIL</label>
-            <input class="form-control-lg col-10" type="text" id="email-usuario" placeholder="Digite seu nome">
+            <input class="form-control-lg col-10" type="text" id="email-usuario" placeholder="Digite seu email">
         </div>
         <div class="form-group row justify-content-start ml-2">
             <label class="col-4 align-self-center font-weight-bolder h3" for="email-usuario">DATA DE NASCIMENTO</label>
@@ -65,15 +65,15 @@
         <div class="form-group row justify-content-around">
             <div class="row col-6 justify-content-between">
                 <label class="col-1 align-self-center font-weight-bolder h3" for="senha-usuario">ENDEREÇO</label>
-                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite seu endereço">
             </div>
             <div class="row col-2 justify-content-between">
                 <label class="col-1 align-self-center font-weight-bolder h3" for="senha-usuario">N°</label>
-                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <input class="form-control-lg col-9" type="email" id="senha-usuario" placeholder="Digite seu numero">
             </div>
             <div class="row col-3 justify-content-around">
                 <label class="col-4 align-self-center font-weight-bolder h3" for="senha-usuario">ESTADO</label>
-                <input class="form-control-lg col-6" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <input class="form-control-lg col-6" type="email" id="senha-usuario" placeholder="Digite seu estado">
             </div>
         </div>
 
