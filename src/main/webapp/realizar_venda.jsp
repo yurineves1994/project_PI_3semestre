@@ -23,17 +23,17 @@
         </div>
         <div class="container-fluid mt-5" >
             <div class="form-group row justify-content-center">
-                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5" for="email-usuario">VENDEDOR RESPOSAVEL</label>
-                <input class="form-control-lg col-8 ml-n5" type="text" id="email-usuario" placeholder="Digite seu nome">
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">VENDEDOR RESPOSAVEL</label>
+                <input class="form-control-lg col-8 ml-n5" type="text">
             </div>
             <div class="form-group row justify-content-center">
-                <label class="col-3 align-self-center font-weight-bolder h3 text-danger" for="email-usuario">NOME DO PRODUTO</label>
-                <input class="form-control-lg col-8" type="text" id="email-usuario" placeholder="Digite seu nome">
+                <label class="col-3 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
+                <input class="form-control-lg col-8" type="text">
             </div>
             <div class="form-group row justify-content-center">
                 <div class="row col-6 justify-content-around">
-                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger" for="senha-usuario">QUANTIDADE</label>
-                    <input class="form-control-lg col-4" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
+                    <input class="form-control-lg col-4" type="number">
                 </div>
                 <div class="row col-6 justify-content-start">
                     <a href="#" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2">ADICIONAR</a>
@@ -41,8 +41,8 @@
             </div>
             <div class="form-group row justify-content-center">
                 <div class="row col-6 justify-content-around">
-                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger" for="senha-usuario">PREÇO</label>
-                    <input class="form-control-lg col-4" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger">PREÇO</label>
+                    <input class="form-control-lg col-4" type="email">
                 </div>
                 <div class="row col-6 justify-content-start">
                     <a href="#" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2">REMOVER</a>
@@ -50,16 +50,16 @@
             </div>
             &nbsp;
             <div class="form-group row justify-content-end">
-                <span class="col-2 align-self-center font-weight-bolder h3 text-danger" for="senha-usuario">VALOR TOTAL:</span>
-                <span class="form-control-lg col-2 mr-3" id="valor-total"></span>
+                <span class="col-2 align-self-center font-weight-bolder h3 text-danger">VALOR TOTAL:</span>
+                <span class="form-control-lg col-2 mr-3"></span>
             </div>
 
             <div class="container-fluid">
                 <div class="row mt-5 justify-content-around">
                     <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
                            value="REALIZAR VENDA">
-                    <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
-                           value="CANCELAR">
+                    <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
+                       value="CANCELAR"></a>
                 </div>
             </div>
         </div>

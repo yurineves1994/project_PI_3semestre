@@ -24,13 +24,13 @@
     <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="masculino">
-                <label class="form-check-label align-self-center font-weight-bolder h5" for="inlineCheckbox1">VENDA POR
+                <input class="form-check-input" type="radio" value="venda_produto">
+                <label class="form-check-label align-self-center font-weight-bolder h5">VENDA POR
                     PRODUTO</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="inlineCheckbox2" value="feminino">
-                <label class="form-check-label align-self-center font-weight-bolder h5" for="inlineCheckbox2">VENDA POR
+                <input class="form-check-input" type="radio" value="venda_vendedor">
+                <label class="form-check-label align-self-center font-weight-bolder h5">VENDA POR
                     VENDEDOR</label>
             </div>
         </div>

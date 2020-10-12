@@ -18,11 +18,11 @@
             <img class=" col-12" src="img/logo.PNG" alt="">
         </div>
         <div class="row col-9 offset-3 justify-content-between mb-5 mt-5">
-            <a href="#" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">CADASTRAR CLIENTE</a>
-            <a href="#" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">CADASTRAR PRODUTO</a>
-            <a href="#" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">ATUALIZAR ESTOQUE</a>
-            <a href="#" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">REALIZAR VENDA</a>
-            <a href="#" class="btn btn-lg btn-danger col-12 font-weight-bolder h1 pb-3 pt-3">GERAR RELATORIOS</a>
+            <a href="cadastro_cliente.jsp" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">CADASTRAR CLIENTE</a>
+            <a href="cadastro_produto.jsp" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">CADASTRAR PRODUTO</a>
+            <a href="atualizar_estoque.jsp" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">ATUALIZAR ESTOQUE</a>
+            <a href="realizar_venda" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">REALIZAR VENDA</a>
+            <a href="relatorios" class="btn btn-lg btn-danger col-12 font-weight-bolder h1 pb-3 pt-3">GERAR RELATORIOS</a>
         </div>
 
     </div>

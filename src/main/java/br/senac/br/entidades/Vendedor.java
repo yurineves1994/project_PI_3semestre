@@ -2,14 +2,28 @@ package br.senac.br.entidades;
 
 public class Vendedor {
 
+    private Integer idV;
+    private Integer nivel_acesso;
     private String nome;
-    private int salario_fixo;
-    private String filial;
+    private String setor;
+    private Integer cpf;
+    private Integer idFilial;
+    private Integer idP;
 
-    public Vendedor(String nome, int salario_fixo, String filial) {
-        this.nome = nome;
-        this.salario_fixo = salario_fixo;
-        this.filial = filial;
+    public Integer getIdV() {
+        return idV;
+    }
+
+    public void setIdV(Integer idV) {
+        this.idV = idV;
+    }
+
+    public Integer getNivel_acesso() {
+        return nivel_acesso;
+    }
+
+    public void setNivel_acesso(Integer nivel_acesso) {
+        this.nivel_acesso = nivel_acesso;
     }
 
     public String getNome() {
@@ -20,20 +34,36 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public int getSalario_fixo() {
-        return salario_fixo;
+    public String getSetor() {
+        return setor;
     }
 
-    public void setSalario_fixo(int salario_fixo) {
-        this.salario_fixo = salario_fixo;
+    public void setSetor(String setor) {
+        this.setor = setor;
     }
 
-    public String getFilial() {
-        return filial;
+    public Integer getCpf() {
+        return cpf;
     }
 
-    public void setFilial(String filial) {
-        this.filial = filial;
+    public void setCpf(Integer cpf) {
+        this.cpf = cpf;
+    }
+
+    public Integer getIdFilial() {
+        return idFilial;
+    }
+
+    public void setIdFilial(Integer idFilial) {
+        this.idFilial = idFilial;
+    }
+
+    public Integer getIdP() {
+        return idP;
+    }
+
+    public void setIdP(Integer idP) {
+        this.idP = idP;
     }
 
 }

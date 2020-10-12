@@ -1,34 +1,42 @@
 
 package br.senac.br.entidades;
 
-public class Vendas {
-   private int valor;
-   private String data_venda;
+public class Vendas extends ItemVenda{
+    private Integer idVenda;
+    private Integer data_venda;
+    private Integer preco_total;
 
-    public Vendas(int valor, String data_venda) {
-        this.valor = valor;
-        this.data_venda = data_venda;
+    // Construtores
+    public Vendas(Integer produto, String nomeProduto, Integer precoProduto, Integer quantidade, String categoria, String descricao, boolean disponivel) {
+        super(produto, nomeProduto, precoProduto, quantidade, categoria, descricao, disponivel);
     }
+  
+    // Getters e Setters
+    public Integer realizarVenda()
     
-    public static void efetuarVenda(int valor) {
-       
+    public Integer getIdVenda() {
+        return idVenda;
     }
 
-    public int getValor() {
-        return valor;
+    public void setIdVenda(Integer idVenda) {
+        this.idVenda = idVenda;
     }
 
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-
-    public String getData_venda() {
+    public Integer getData_venda() {
         return data_venda;
     }
 
-    public void setData_venda(String data_venda) {
+    public void setData_venda(Integer data_venda) {
         this.data_venda = data_venda;
     }
-   
-   
+
+    public Integer getPreco_total() {
+        return preco_total;
+    }
+
+    public void setPreco_total(Integer preco_total) {
+        this.preco_total = preco_total;
+    }
+    
+    
 }

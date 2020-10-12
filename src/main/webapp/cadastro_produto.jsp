@@ -14,44 +14,44 @@
     </head>
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
-        <div class="col-5 ">
-            <img class="" src="img/logo.PNG" alt="">
-        </div>
-        <div class="col-6 mt-4">
-            <h1 class=" display-4 font-weight-bolder">CADASTRAR PRODUTO</h1>
-        </div>
-    </div>
-    <div class="container-fluid mt-5" >
-        <div class="form-group row justify-content-center">
-            <label class="col-3 align-self-center font-weight-bolder h3" for="email-usuario">NOME DO PRODUTO</label>
-            <input class="form-control-lg col-8" type="text" id="email-usuario" placeholder="Digite seu nome">
-        </div>
-        <div class="form-group row justify-content-center">
-            <div class="row col-6 justify-content-around">
-                <label class="col-3 align-self-center font-weight-bolder h3" for="senha-usuario">PREÇO</label>
-                <input class="form-control-lg col-4" type="email" id="senha-usuario" placeholder="Digite sua senha">
+            <div class="col-5 ">
+                <img class="" src="img/logo.PNG" alt="">
             </div>
-            <div class="row col-6 justify-content-start">
-                <label class="col-4 align-self-center font-weight-bolder h3" for="senha-usuario">CATEGORIA</label>
-                <input class="form-control-lg col-7" type="email" id="senha-usuario" placeholder="Digite sua senha">
+            <div class="col-6 mt-4">
+                <h1 class=" display-4 font-weight-bolder">CADASTRAR PRODUTO</h1>
             </div>
         </div>
-        <div class="form-group row justify-content-start">
-            <div class="row col-12 justify-content-center">
-                <label class="col-3 align-self-start font-weight-bolder h3" for="senha-usuario">DESCRIÇÃO</label>
-                <textarea class=" col-8" id="mensagem" rows="9"></textarea>
+        <form class="container-fluid mt-5" action="CadastrarProduto" method="POST">
+            <div class="form-group row justify-content-center">
+                <label class="col-3 align-self-center font-weight-bolder h3">NOME DO PRODUTO</label>
+                <input class="form-control-lg col-8" type="text">
             </div>
-            
-        </div>
+            <div class="form-group row justify-content-center">
+                <div class="row col-6 justify-content-around">
+                    <label class="col-3 align-self-center font-weight-bolder h3">PREÇO</label>
+                    <input class="form-control-lg col-4" type="email">
+                </div>
+                <div class="row col-6 justify-content-start">
+                    <label class="col-4 align-self-center font-weight-bolder h3">CATEGORIA</label>
+                    <input class="form-control-lg col-7" type="email">
+                </div>
+            </div>
+            <div class="form-group row justify-content-start">
+                <div class="row col-12 justify-content-center">
+                    <label class="col-3 align-self-start font-weight-bolder h3">DESCRIÇÃO</label>
+                    <textarea class="col-8" rows="9"></textarea>
+                </div>
 
-        <div class="container-fluid">
-            <div class="row mt-5 justify-content-around">
-                <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
-                    value="CADASTRAR PRODUTO">
-                <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
-                    value="CANCELAR">
             </div>
-        </div>
-    </div>
+
+            <div class="container-fluid">
+                <div class="row mt-5 justify-content-around">
+                    <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
+                           value="CADASTRAR PRODUTO">
+                    <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
+                       >CANCELAR</a>
+                </div>
+            </div>
+        </form>
     </body>
 </html>

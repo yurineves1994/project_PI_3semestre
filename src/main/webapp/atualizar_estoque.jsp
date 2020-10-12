@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-     <div class="container-fluid row mt-5 justify-content-around">
+    <div class="container-fluid row mt-5 justify-content-around">
         <div class="col-5 ">
             <img class="" src="img/logo.PNG" alt="">
         </div>
@@ -20,36 +20,36 @@
             <h1 class=" display-4 font-weight-bolder">ATUALIZAR ESTOQUE</h1>
         </div>
     </div>
-    <div class="container-fluid mt-5" >
+    <form class="container-fluid mt-5" action="AtualizarEstoque" method="POST">
         <div class="form-group row justify-content-center">
-            <label class="col-3 align-self-center font-weight-bolder h3" for="email-usuario">NOME DO PRODUTO</label>
-            <input class="form-control-lg col-8" type="text" id="email-usuario" placeholder="Digite seu nome">
+            <label class="col-3 align-self-center font-weight-bolder h3">NOME DO PRODUTO</label>
+            <input class="form-control-lg col-8" type="text">
         </div>
         <div class="form-group row justify-content-center">
             <div class="row col-6 justify-content-around">
-                <label class="col-3 align-self-center font-weight-bolder h3" for="senha-usuario">PREÇO</label>
-                <input class="form-control-lg col-4" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <label class="col-3 align-self-center font-weight-bolder h3">PREÇO</label>
+                <input class="form-control-lg col-4" type="number">
             </div>
             <div class="row col-6 justify-content-start">
-                <label class="col-4 align-self-center font-weight-bolder h3" for="senha-usuario">QUANTIDADE</label>
-                <input class="form-control-lg col-7 " type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <label class="col-4 align-self-center font-weight-bolder h3">QUANTIDADE</label>
+                <input class="form-control-lg col-7 " type="number">
             </div>
         </div>
         <div class="form-group row justify-content-start">
             <div class="row col-12 justify-content-center">
-                <label class="col-3 align-self-start font-weight-bolder h3" for="senha-usuario">DESCRIÇÃO</label>
-                <textarea class=" col-8" id="mensagem" rows="9"></textarea>
+                <label class="col-3 align-self-start font-weight-bolder h3">DESCRIÇÃO</label>
+                <textarea class=" col-8" rows="9"></textarea>
             </div>
-            
+
         </div>
 
         <div class="container-fluid">
             <div class="row mt-5 justify-content-around">
                 <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
-                    value="ATUALIZAR ESTOQUE">
-                <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
-                    value="CANCELAR">
+                       value="ATUALIZAR ESTOQUE">
+                <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
+                   value="CANCELAR"></a>
             </div>
         </div>
-    </div>
+    </form>
 </html>

@@ -7,30 +7,22 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 public class VendasDAO {
-    public static List<Vendas> getClientes() {
-        List<Vendas> listaVendas = new ArrayList();
+    public static void adicionarItemVenda(Vendas venda) {
         try {
             // faz a conexao com o Banco de dados criado na pasta bd
             Connection con = ConexaoDB.obterConexao();
             //queery de requisicao do banco de dados
-            String query = "select valor, data_venda from venda";
+            String query = "insert into from tabela_vendas(nomeProduto, preco_produto, quantidade)";
             PreparedStatement ps = con.prepareStatement(query);
+            
             ResultSet resultado = ps.executeQuery();
 
-            // para mostrar na tela
-            while (resultado.next()) {
-                String nome = resultado.getString("nome");
-                String email = resultado.getString("email");
-                listaVendas.add(new Vendas(valor, data_venda));
-
-            }
+           
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletDB.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
