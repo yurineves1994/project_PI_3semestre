@@ -48,7 +48,7 @@
                 <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
                        value="ATUALIZAR ESTOQUE">
                 <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
-                   value="CANCELAR"></a>
+                   >CANCELAR</a>
             </div>
         </div>
     </form>

@@ -1,19 +1,18 @@
-
 package br.senac.br.entidades;
 
 public class Produto {
-    
+
     private Integer idProduto;
     private String nomeProduto;
-    private Integer precoProduto;
-    private Integer quantidade;
+    private Long precoProduto;
+    private Long quantidade;
     private String categoria;
     private String descricao;
     private boolean disponivel;
-    
-    //Construtores
 
-    public Produto(Integer produto, String nomeProduto, Integer precoProduto, Integer quantidade, String categoria, String descricao, boolean disponivel) {
+    //Construtores
+    public Produto(){};
+    public Produto(Integer produto, String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao, boolean disponivel) {
         this.idProduto = produto;
         this.nomeProduto = nomeProduto;
         this.precoProduto = precoProduto;
@@ -23,7 +22,7 @@ public class Produto {
         this.disponivel = disponivel;
     }
 
-    public Produto(String nomeProduto, Integer precoProduto, Integer quantidade, String categoria, String descricao, boolean disponivel) {
+    public Produto(String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao, boolean disponivel) {
         this.nomeProduto = nomeProduto;
         this.precoProduto = precoProduto;
         this.quantidade = quantidade;
@@ -31,10 +30,16 @@ public class Produto {
         this.descricao = descricao;
         this.disponivel = disponivel;
     }
-    
-    
-    // Getters e Setters
 
+    public Produto(String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao) {
+        this.nomeProduto = nomeProduto;
+        this.precoProduto = precoProduto;
+        this.quantidade = quantidade;
+        this.categoria = categoria;
+        this.descricao = descricao;
+    }
+
+    // Getters e Setters
     public Integer getIdProduto() {
         return idProduto;
     }
@@ -51,19 +56,19 @@ public class Produto {
         this.nomeProduto = nomeProduto;
     }
 
-    public Integer getPrecoProduto() {
+    public Long getPrecoProduto() {
         return precoProduto;
     }
 
-    public void setPrecoProduto(Integer precoProduto) {
+    public void setPrecoProduto(Long precoProduto) {
         this.precoProduto = precoProduto;
     }
 
-    public Integer getQuantidade() {
+    public Long getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(Long quantidade) {
         this.quantidade = quantidade;
     }
 
@@ -83,6 +88,13 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    public boolean estaDisponivel() {
+        if (this.getQuantidade() > 1) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean isDisponivel() {
         return disponivel;
     }
@@ -90,5 +102,5 @@ public class Produto {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-    
+
 }

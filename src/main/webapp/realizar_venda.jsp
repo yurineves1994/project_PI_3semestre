@@ -4,6 +4,7 @@
     Author     : yurin
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
@@ -21,31 +23,34 @@
                 <h1 class=" display-4 font-weight-bolder">REALIZAR VENDA</h1>
             </div>
         </div>
-        <div class="container-fluid mt-5" >
+        <form class="container-fluid mt-5" action="RealizarVenda" method="POST">
             <div class="form-group row justify-content-center">
-                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">VENDEDOR RESPOSAVEL</label>
-                <input class="form-control-lg col-8 ml-n5" type="text">
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME DO CLIENTE</label>
+                <input name="nome_cliente" class="form-control-lg col-8 ml-n5" type="text">
             </div>
             <div class="form-group row justify-content-center">
-                <label class="col-3 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
-                <input class="form-control-lg col-8" type="text">
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">ID VENDEDOR</label>
+                <input name="id_vendedor"  class="form-control-lg col-8 ml-n5" type="number">
             </div>
-            <div class="form-group row justify-content-center">
-                <div class="row col-6 justify-content-around">
-                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
-                    <input class="form-control-lg col-4" type="number">
+            
+            <div class="form-group row justify-content-around">
+                <div class="row col-7 justify-content-around">
+                    <label class="col-6 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
+                    <input name="nomeProduto" class="form-control-lg col-6" type="text">
                 </div>
-                <div class="row col-6 justify-content-start">
-                    <a href="#" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2">ADICIONAR</a>
+                <div class="row col-3 justify-content-around">
+                    <label class="col-8 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
+                    <input name="qtdVenda" class="form-control-lg col-3" type="number">
+                </div>
+                <div class="row col-2 justify-content-center">
+                    <a href="#" class="btn btn-lg btn-danger col-12 AdicionarACompra?nome_cliente=${nome_cliente}" font-weight-bolder h2 pb-2 pt-2 ml-n5">ADICIONAR</a>
                 </div>
             </div>
-            <div class="form-group row justify-content-center">
-                <div class="row col-6 justify-content-around">
-                    <label class="col-3 align-self-center font-weight-bolder h3 text-danger">PREÇO</label>
-                    <input class="form-control-lg col-4" type="email">
-                </div>
-                <div class="row col-6 justify-content-start">
-                    <a href="#" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2">REMOVER</a>
+            
+            <div class="form-group row justify-content-end">
+                
+                <div class="row col-2 justify-content-start mr-4 ml-2">
+                    <a href="#" class="btn btn-lg btn-danger col-12 font-weight-bolder h3 ">REMOVER</a>
                 </div>
             </div>
             &nbsp;
@@ -59,10 +64,10 @@
                     <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
                            value="REALIZAR VENDA">
                     <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
-                       value="CANCELAR"></a>
+                       >CANCELAR</a>
                 </div>
             </div>
-        </div>
+        </form>
 
     </body>
 </html>

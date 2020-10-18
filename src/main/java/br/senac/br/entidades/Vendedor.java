@@ -1,69 +1,79 @@
 package br.senac.br.entidades;
 
 public class Vendedor {
+    private String nome_vendedor;
+    private Integer id_vendedor;
+    private String senha;
+    private String cargo;
+    private String filial;
+    private String departamento;
+    
+    public Vendedor(){};
 
-    private Integer idV;
-    private Integer nivel_acesso;
-    private String nome;
-    private String setor;
-    private Integer cpf;
-    private Integer idFilial;
-    private Integer idP;
-
-    public Integer getIdV() {
-        return idV;
+    public Vendedor(String nome_vendedor, Integer id_vendedor, String senha, String cargo, String filial, String departamento) {
+        this.nome_vendedor = nome_vendedor;
+        this.id_vendedor = id_vendedor;
+        this.senha = senha;
+        this.cargo = cargo;
+        this.filial = filial;
+        this.departamento = departamento;
     }
 
-    public void setIdV(Integer idV) {
-        this.idV = idV;
+    public Vendedor(String nome_vendedor, String cargo, String filial, String departamento) {
+        this.nome_vendedor = nome_vendedor;
+        this.cargo = cargo;
+        this.filial = filial;
+        this.departamento = departamento;
     }
 
-    public Integer getNivel_acesso() {
-        return nivel_acesso;
+    public String getNome_vendedor() {
+        return nome_vendedor;
     }
 
-    public void setNivel_acesso(Integer nivel_acesso) {
-        this.nivel_acesso = nivel_acesso;
+    public void setNome_vendedor(String nome_vendedor) {
+        this.nome_vendedor = nome_vendedor;
     }
 
-    public String getNome() {
-        return nome;
+    public Integer getId_vendedor() {
+        return id_vendedor;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId_vendedor(Integer id_vendedor) {
+        this.id_vendedor = id_vendedor;
     }
 
-    public String getSetor() {
-        return setor;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setSetor(String setor) {
-        this.setor = setor;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public Integer getCpf() {
-        return cpf;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setCpf(Integer cpf) {
-        this.cpf = cpf;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
-    public Integer getIdFilial() {
-        return idFilial;
+    public String getFilial() {
+        return filial;
     }
 
-    public void setIdFilial(Integer idFilial) {
-        this.idFilial = idFilial;
+    public void setFilial(String filial) {
+        this.filial = filial;
     }
 
-    public Integer getIdP() {
-        return idP;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setIdP(Integer idP) {
-        this.idP = idP;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
+    
+    
 }

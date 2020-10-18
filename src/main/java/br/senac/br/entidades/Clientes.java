@@ -1,63 +1,45 @@
 package br.senac.br.entidades;
 
 public class Clientes {
-
-    private Integer idP;
-    private String nome;
+    private Integer id_cliente;
+    private String nome_cliente;
     private Long cpf;
     private Long rg;
-    private String sexo;
     private String telefone;
     private String email;
     private String dataNascimento;
     private String endereco;
     private Integer numero;
     private String estado;
-
-    // CONTRUTORES
-    public Clientes(Integer idP, String nome, Long cpf, Long rg, String sexo, String telefone, String email, String dataNascimento, String endereco, Integer numero, String estado) {
-        this.idP = idP;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.sexo = sexo;
-        this.telefone = telefone;
-        this.email = email;
-        this.dataNascimento = dataNascimento;
-        this.endereco = endereco;
-        this.numero = numero;
-        this.estado = estado;
-    }
-
-    public Clientes(String nome, Long cpf, Long rg, String sexo, String telefone, String email, String dataNascimento, String endereco, Integer numero, String estado) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.sexo = sexo;
-        this.telefone = telefone;
-        this.email = email;
-        this.dataNascimento = dataNascimento;
-        this.endereco = endereco;
-        this.numero = numero;
-        this.estado = estado;
-    }
     
+    public Clientes(){};
 
-    // METODOS GETTERS E SETTERS
-    public Integer getIdP() {
-        return idP;
+    public Clientes(String nome_cliente, Long cpf, Long rg, String telefone, String email, String dataNascimento, String endereco, Integer numero, String estado) {
+        this.nome_cliente = nome_cliente;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.telefone = telefone;
+        this.email = email;
+        this.dataNascimento = dataNascimento;
+        this.endereco = endereco;
+        this.numero = numero;
+        this.estado = estado;
     }
 
-    public void setIdP(Integer idP) {
-        this.idP = idP;
+    public Integer getId_cliente() {
+        return id_cliente;
     }
 
-    public String getNome() {
-        return nome;
+    public void setId_cliente(Integer id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getNome_cliente() {
+        return nome_cliente;
+    }
+
+    public void setNome_cliente(String nome_cliente) {
+        this.nome_cliente = nome_cliente;
     }
 
     public Long getCpf() {
@@ -74,14 +56,6 @@ public class Clientes {
 
     public void setRg(Long rg) {
         this.rg = rg;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
     }
 
     public String getTelefone() {
@@ -132,4 +106,6 @@ public class Clientes {
         this.estado = estado;
     }
 
+    
+   
 }

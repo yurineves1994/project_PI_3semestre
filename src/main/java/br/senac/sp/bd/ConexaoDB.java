@@ -13,7 +13,7 @@ public class ConexaoDB {
     // Bloco Executado uma unica vez quando o servidor é inicializado
     static {
         try {
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ConexaoDB.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -21,9 +21,9 @@ public class ConexaoDB {
 
     public static Connection obterConexao() throws ClassNotFoundException, SQLException {
         // url do banco de dados, muda de tipo de banco de dados
-        String url = "jdbc:derby://localhost:1527/mangaDB";
+        String url = "jdbc:mysql://localhost:3306/mangadb";
         //o usuario de acesso do banco ( estou usando mysql, geralmente é root)
-        String user = "mangadb";
+        String user = "root";
         //senha do banco
         String senha = "";
 

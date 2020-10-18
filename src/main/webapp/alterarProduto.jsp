@@ -1,9 +1,8 @@
 <%-- 
-    Document   : cadastro_produto
-    Created on : 08/10/2020, 18:57:07
+    Document   : alterarProduto
+    Created on : 17/10/2020, 21:04:08
     Author     : yurin
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,36 +13,32 @@
     </head>
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
-            <div class="col-5 ">
+            <div class="col-4 ">
                 <img class="" src="img/logo.PNG" alt="">
             </div>
-            <div class="col-6 mt-4">
-                <h1 class=" display-4 font-weight-bolder">CADASTRAR PRODUTO</h1>
+            <div class="col-7 mt-4">
+                <h1 class=" display-5 font-weight-bolder">ALTERAR PRODUTO:${produto.nomeProduto}</h1>
             </div>
         </div>
         <form class="container-fluid mt-5" action="CadastrarProduto" method="POST">
             <div class="form-group row justify-content-center">
                 <label class="col-3 align-self-center font-weight-bolder h3">NOME DO PRODUTO</label>
-                <input name="nomeProduto" class="form-control-lg col-8" type="text">
+                <input name="nomeProduto" value="${produto.nomeProduto}" class="form-control-lg col-8" type="text">
             </div>
             <div class="form-group row justify-content-center">
-                <div class="row col-4 justify-content-between">
-                    <label class="col-5 align-self-center font-weight-bolder h3">PREÇO</label>
-                    <input name="precoProduto" class="form-control-lg col-4" type="number">
+                <div class="row col-6 justify-content-around">
+                    <label class="col-3 align-self-center font-weight-bolder h3">PREÇO</label>
+                    <input name="precoProduto" value="${produto.precoProduto}" class="form-control-lg col-4" type="email">
                 </div>
-                <div class="row col-4 justify-content-between">
-                    <label class="col-3 align-self-center font-weight-bolder h3">CATEGORIA</label>
-                    <input name="categoria" class="form-control-lg col-6" type="text">
-                </div>
-                <div class="row col-3 justify-content-between">
-                    <label class="col-4 align-self-center font-weight-bolder h3">QUANTIDADE</label>
-                    <input name="quantidade" class="form-control-lg col-4" type="number">
+                <div class="row col-6 justify-content-start">
+                    <label class="col-4 align-self-center font-weight-bolder h3">CATEGORIA</label>
+                    <input name="categoria" value="${produto.categoria}" class="form-control-lg col-7" type="email">
                 </div>
             </div>
             <div class="form-group row justify-content-start">
                 <div class="row col-12 justify-content-center">
                     <label class="col-3 align-self-start font-weight-bolder h3">DESCRIÇÃO</label>
-                    <textarea name="descricao" class="col-8" rows="9"></textarea>
+                    <textarea name="descricao" value="${produto.descricao}" class="col-8" rows="9"></textarea>
                 </div>
 
             </div>
@@ -51,8 +46,8 @@
             <div class="container-fluid">
                 <div class="row mt-5 justify-content-around">
                     <div class="row col-12 mt-5 justify-content-around">
-                        <button class="btn btn-lg btn-danger col-5  font-weight-bolder h4 pb-2 pt-2" 
-                          type="submit"     >CADASTRAR PRODUTO</button>
+                        <a class="btn btn-lg btn-danger col-5  font-weight-bolder h4 pb-2 pt-2" 
+                           href="AlterarProduto">ALTERAR PRODUTO</a>
                         
                         <a class="btn btn-lg btn-danger col-5  font-weight-bolder h4 pb-2 pt-2"  
                            href="index.jsp">CANCELAR</a>
