@@ -27,7 +27,6 @@ public class ProdutoDAO {
                 Long quantidade = rs.getLong("quantidade");
                 String categoria = rs.getString("categoria");
                 String descricao = rs.getString("descricao");
-
                 listaProdutos.add(new Produto(nomeProduto, precoProduto, quantidade, categoria, descricao));
             }
         } catch (ClassNotFoundException ex) {
@@ -42,7 +41,7 @@ public class ProdutoDAO {
 
     public static void addProduto(Produto produto) throws SQLException, ClassNotFoundException {
         Connection con = ConexaoDB.obterConexao();
-        String query = "insert into produto(nomeProduto, precoProduto, quantidade, categoria, descricao)) values (?,?,?,?,?)";
+        String query = "insert into produto(nomeProduto, precoProduto, quantidade, categoria, descricao) values (?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, produto.getNomeProduto());
         ps.setLong(2, produto.getPrecoProduto());
@@ -55,7 +54,7 @@ public class ProdutoDAO {
 
     public static void updateProduto(Produto produto) throws ClassNotFoundException, SQLException {
         Connection con = ConexaoDB.obterConexao();
-        String query = "update produto set nomeProduto=?,precoProduto=?, quantidade=?, categoria=?, descricao=?";
+        String query = "update produto set precoProduto=?, quantidade=?, categoria=?, descricao=? where nomeProduto=?";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, produto.getNomeProduto());
         ps.setLong(2, produto.getPrecoProduto());
@@ -78,12 +77,11 @@ public class ProdutoDAO {
         Produto produto = null;
         try {
             Connection con = ConexaoDB.obterConexao();
-            String query = "select * from tb_produto where nomeProduto=?";
+            String query = "select * from produto where nomeProduto=?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, nomeProduto);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-
                 Long precoProduto = rs.getLong("precoProduto");
                 Long quantidade = rs.getLong("quantidade");
                 String categoria = rs.getString("categoria");

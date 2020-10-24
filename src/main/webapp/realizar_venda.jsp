@@ -11,9 +11,9 @@
     <%@include file="header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Mangá Store</title>
     </head>
-    
+
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
@@ -29,14 +29,29 @@
                 <input name="nome_cliente" class="form-control-lg col-8 ml-n5" type="text">
             </div>
             <div class="form-group row justify-content-center">
-                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">ID VENDEDOR</label>
-                <input name="id_vendedor"  class="form-control-lg col-8 ml-n5" type="number">
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME DO VENDEDOR</label>
+                <select class="form-control-lg col-8 ml-n5" name="nome_vendedor">
+                    <option value="Ian Procopio">Ian Procopio</option>
+                    <option value="João Finasterido">João Finasterido</option>
+                    <option value="Pedro">Pedro</option>
+                    <option value="Fabricio Buarque">Fabricio Buarque</option>
+                    <option value="Fernando Fuande">Fernando Fuande</option>
+                    <option value="Luiza Gueder">Luiza Gueder</option>
+                    <option value="Tomaz Admiltom">Tomaz Admiltom</option>
+                </select>
             </div>
-            
+
             <div class="form-group row justify-content-around">
                 <div class="row col-7 justify-content-around">
+
                     <label class="col-6 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
-                    <input name="nomeProduto" class="form-control-lg col-6" type="text">
+
+                    <select class="form-control-lg col-6" name="nomeProduto">
+                        <c:forEach items="${listaProdutos}" var="produto">
+                            <option>${produto.nomeProduto}</option>
+                        </c:forEach>
+                    </select>
+
                 </div>
                 <div class="row col-3 justify-content-around">
                     <label class="col-8 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
@@ -46,9 +61,9 @@
                     <a href="#" class="btn btn-lg btn-danger col-12 AdicionarACompra?nome_cliente=${nome_cliente}" font-weight-bolder h2 pb-2 pt-2 ml-n5">ADICIONAR</a>
                 </div>
             </div>
-            
+
             <div class="form-group row justify-content-end">
-                
+
                 <div class="row col-2 justify-content-start mr-4 ml-2">
                     <a href="#" class="btn btn-lg btn-danger col-12 font-weight-bolder h3 ">REMOVER</a>
                 </div>

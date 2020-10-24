@@ -11,40 +11,44 @@
     <%@include file="header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Mangá Store</title>
     </head>
     <body>
-        <h1>Lista de Clientes</h1>
-        <table class="table table-md table-bordered">
-            <thead>
+        <div class="container-fluid row mt-5 justify-content-around">
+            <div class="col-5 ">
+                <img class="" src="img/logo.PNG" alt="">
+            </div>
+            <div class="col-6 mt-4">
+                <h1 class=" display-4 font-weight-bolder">LISTAR CLIENTE</h1>
+            </div>
+        </div>
+        <table class="table table-bordered mt-3 table-hover">
+            <thead class="thead-dark">
                 <tr>
-                    <th>Nome</th>
+                    <th>NOME</th>
                     <th>CPF</th>
                     <th>RG</th>
-                    <th>Sexo</th>
-                    <th>Telefone</th>
-                    <th>Email</th>
-                    <th>Data de Nascimento</th>
-                    <th>Endereço</th>
-                    <th>Numero</th>
-                    <th>Estado</th>
+                    <th>TELEFONE</th>
+                    <th>EMAIL</th>
+                    <th>ENDEREÇO</th>
+                    <th>NUMERO</th>
+                    <th>ESTADO</th>
+                    <th style="text-align: center" colspan="2">BOTOÕES</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach items="${listaClientes}" var="cliente">
                     <tr>
-                        <td>${cliente.nome}</td>
+                        <td>${cliente.nome_cliente}</td>
                         <td>${cliente.cpf}</td>
                         <td>${cliente.rg}</td>
-                        <td>${cliente.sexo}</td>
                         <td>${cliente.telefone}</td>
                         <td>${cliente.email}</td>
-                        <td>${cliente.datanascimento}</td>
                         <td>${cliente.endereco}</td>
                         <td>${cliente.numero}</td>
                         <td>${cliente.estado}</td>
-                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarCliente?${cliente.cpf}">Alterar</a></td>
-                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirCliente?${cliente.cpf}">Excluir</a></td>
+                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarCliente?cpf=${cliente.cpf}">Alterar</a></td>
+                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirCliente?cpf=${cliente.cpf}">Excluir</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

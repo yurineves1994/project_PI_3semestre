@@ -4,6 +4,8 @@ import br.senac.br.entidades.Clientes;
 import br.senac.sp.dao.ClienteDAO;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,8 +37,7 @@ public class AlterarCliente extends HttpServlet {
         Long cpf = Long.parseLong(request.getParameter("cpf"));
         Long rg = Long.parseLong(request.getParameter("rg"));
         String telefone = request.getParameter("telefone");
-        String email = request.getParameter("email");
-        String dataNascimento = request.getParameter("dataNascimento");
+        String email = request.getParameter("email");      
         String endereco = request.getParameter("endereco");
         Integer numero = Integer.parseInt(request.getParameter("numero"));
         String estado = request.getParameter("estado");
@@ -45,8 +46,7 @@ public class AlterarCliente extends HttpServlet {
         cliente.setNome_cliente(nome);
         cliente.setRg(rg);
         cliente.setTelefone(telefone);
-        cliente.setEmail(email);
-        cliente.setDataNascimento(dataNascimento);
+        cliente.setEmail(email);      
         cliente.setEndereco(endereco);
         cliente.setNumero(numero);
         cliente.setEstado(estado);
@@ -54,6 +54,8 @@ public class AlterarCliente extends HttpServlet {
             ClienteDAO.updateCliente(cliente);
             response.sendRedirect("sucesso.jsp");
         } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(ServletBD.class.getName()).
+                    log(Level.SEVERE, null, ex);
             response.sendRedirect("tela_falha.jsp");
         }
     }

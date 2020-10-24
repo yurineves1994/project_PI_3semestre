@@ -1,26 +1,26 @@
 package br.senac.br.entidades;
 
 public class Clientes {
+
     private Integer id_cliente;
     private String nome_cliente;
     private Long cpf;
     private Long rg;
     private String telefone;
     private String email;
-    private String dataNascimento;
     private String endereco;
     private Integer numero;
     private String estado;
-    
-    public Clientes(){};
 
-    public Clientes(String nome_cliente, Long cpf, Long rg, String telefone, String email, String dataNascimento, String endereco, Integer numero, String estado) {
+    public Clientes() {
+    }
+
+    public Clientes(String nome_cliente, Long cpf, Long rg, String telefone, String email, String endereco, Integer numero, String estado) {
         this.nome_cliente = nome_cliente;
         this.cpf = cpf;
         this.rg = rg;
         this.telefone = telefone;
         this.email = email;
-        this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.numero = numero;
         this.estado = estado;
@@ -74,14 +74,6 @@ public class Clientes {
         this.email = email;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getEndereco() {
         return endereco;
     }
@@ -106,6 +98,4 @@ public class Clientes {
         this.estado = estado;
     }
 
-    
-   
 }

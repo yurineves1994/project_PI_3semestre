@@ -21,7 +21,7 @@ public class ListarClientes extends HttpServlet {
             throws ServletException, IOException {
         List<Clientes> listaClientes = ClienteDAO.listarClientes();
 
-        request.setAttribute("listarClientes", listaClientes);
+        request.setAttribute("listaClientes", listaClientes);
 
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listarCliente.jsp");
         requestDispatcher.forward(request, response);

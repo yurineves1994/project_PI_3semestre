@@ -4,6 +4,8 @@ import br.senac.br.entidades.Produto;
 import br.senac.sp.dao.ProdutoDAO;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,6 +46,8 @@ public class AlterarProduto extends HttpServlet {
             ProdutoDAO.updateProduto(produto);
             response.sendRedirect("sucesso.jsp");
         } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(ServletBD.class.getName()).
+                    log(Level.SEVERE, null, ex);
             response.sendRedirect("tela_falha.jsp");
         }
     }

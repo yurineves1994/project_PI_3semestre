@@ -10,7 +10,7 @@
     <%@include file="header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Mangá Store</title>
     </head>
     <body>
         <div class="container-fluid row mt-5 justify-content-around">

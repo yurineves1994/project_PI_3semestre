@@ -4,6 +4,7 @@
     Author     : yurin
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,16 +14,23 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Lista de Produtos</h1>
-        <table class="table table-md table-bordered">
-            <thead>
+        <div class="container-fluid row mt-5 justify-content-around">
+            <div class="col-5 ">
+                <img class="" src="img/logo.PNG" alt="">
+            </div>
+            <div class="col-6 mt-4">
+                <h1 class=" display-4 font-weight-bolder">LISTAR PRODUTO</h1>
+            </div>
+        </div>
+        <table class="table table-bordered mt-3 table-hover">
+            <thead class="thead-dark">
                 <tr>
-                    <th>Nome do produto</th>
-                    <th>Preço</th>
-                    <th>Quantidade disponivel</th>
-                    <th>Categoria</th>
-                    <th>Descricao</th>
-                    <th>Disponivel?</th>
+                    <th>NOME DO PRODUTO</th>
+                    <th>PREÇO</th>
+                    <th>QUANTIDADE</th>
+                    <th>CATEGORIA</th>
+                    <th>DESCRIÇÃO</th>
+                    <th colspan="2" style="text-align: center">BOTÕES</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,9 +41,9 @@
                     <td>${produto.quantidade}</td>
                     <td>${produto.categoria}</td>
                     <td>${produto.descricao}</td>
-                    <td>${produto.disponivel}</td>
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ReporEstoque?${produto.nomeProduto}">ReporEstoque</a></td>
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirProduto?${produto.nomeProduto}">ReporEstoque</a></td>
+
+                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?nomeProduto=${produto.nomeProduto}">ATUALIZAR</a></td>
+                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirProduto?nomeProduto=${produto.nomeProduto}">EXCLUIR</a></td>
                 </tr>
             </c:forEach>
         </tbody>

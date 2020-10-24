@@ -10,7 +10,7 @@
     <%@include file="header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Mangá Store</title>
     </head>
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
@@ -23,7 +23,7 @@
         </div>
         <form class="container-fluid mt-5" action="CadastrarProduto" method="POST">
             <div class="form-group row justify-content-center">
-                <label class="col-3 align-self-center font-weight-bolder h3">NOME DO PRODUTO</label>
+                <label class="col-3 align-self-center font-weight-bolder h3 ml-n4">NOME DO PRODUTO</label>
                 <input name="nomeProduto" class="form-control-lg col-8" type="text">
             </div>
             <div class="form-group row justify-content-center">
@@ -31,12 +31,17 @@
                     <label class="col-5 align-self-center font-weight-bolder h3">PREÇO</label>
                     <input name="precoProduto" class="form-control-lg col-4" type="number">
                 </div>
-                <div class="row col-4 justify-content-between">
-                    <label class="col-3 align-self-center font-weight-bolder h3">CATEGORIA</label>
-                    <input name="categoria" class="form-control-lg col-6" type="text">
+                <div class="row col-4 justify-content-around">
+                    <label class="col-4 align-self-center font-weight-bolder h3">CATEGORIA</label>
+                    <select class="form-control-lg col-4" name="categoria">
+                        <option value="Manga">Mangá</option>
+                        <option value="Colecionaveis">Colecionaveis</option>
+                        <option value="Camisetas">Camisetas</option>
+
+                    </select>
                 </div>
                 <div class="row col-3 justify-content-between">
-                    <label class="col-4 align-self-center font-weight-bolder h3">QUANTIDADE</label>
+                    <label class="col-5 align-self-center font-weight-bolder h3">QUANTIDADE</label>
                     <input name="quantidade" class="form-control-lg col-4" type="number">
                 </div>
             </div>
@@ -52,8 +57,8 @@
                 <div class="row mt-5 justify-content-around">
                     <div class="row col-12 mt-5 justify-content-around">
                         <button class="btn btn-lg btn-danger col-5  font-weight-bolder h4 pb-2 pt-2" 
-                          type="submit"     >CADASTRAR PRODUTO</button>
-                        
+                                type="submit">CADASTRAR PRODUTO</button>
+
                         <a class="btn btn-lg btn-danger col-5  font-weight-bolder h4 pb-2 pt-2"  
                            href="index.jsp">CANCELAR</a>
                     </div>

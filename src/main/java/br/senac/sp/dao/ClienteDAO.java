@@ -29,14 +29,12 @@ public class ClienteDAO {
                 String nome_cliente = rs.getString("nome_cliente");
                 Long cpf = rs.getLong("cpf");
                 Long rg = rs.getLong("rg");
-                String sexo = rs.getString("sexo");
                 String telefone = rs.getString("telefone");
                 String email = rs.getString("email");
-                String dataNascimento = rs.getString("dataNascimento");
                 String endereco = rs.getString("endereco");
                 Integer numero = rs.getInt("numero");
                 String estado = rs.getString("estado");
-                listaClientes.add(new Clientes(nome_cliente, cpf, rg, telefone, email, dataNascimento, endereco, numero, estado));
+                listaClientes.add(new Clientes(nome_cliente, cpf, rg, telefone, email, endereco, numero, estado));
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).
@@ -50,33 +48,31 @@ public class ClienteDAO {
 
     public static void addCliente(Clientes cliente) throws SQLException, ClassNotFoundException {
         Connection con = ConexaoDB.obterConexao();
-        String query = "insert into cliente(nome_cliente, cpf, rg, telefone, email, dataNascimento, endereco, numero, estado) values (?,?,?,?,?,?,?,?,?)";
-        PreparedStatement ps = con.prepareStatement(query);
-        ps.setString(1, cliente.getNome_cliente());
-        ps.setLong(2, cliente.getCpf());
-        ps.setLong(3, cliente.getRg());
-        ps.setString(5, cliente.getTelefone());
-        ps.setString(6, cliente.getEmail());
-        ps.setString(7, cliente.getDataNascimento());
-        ps.setString(8, cliente.getEndereco());
-        ps.setInt(9, cliente.getNumero());
-        ps.setString(10, cliente.getEstado());
-        ps.execute();
-    }
-
-    public static void updateCliente(Clientes cliente) throws ClassNotFoundException, SQLException {
-        Connection con = ConexaoDB.obterConexao();
-        String query = "update cliente set nome_cliente=?,cpf=?, rg=?, telefone=?, email=?, dataNascimento=?, endereco=?, numero=?, estado=? where cpf=?";
+        String query = "insert into cliente(nome_cliente, cpf, rg, telefone, email, endereco, numero, estado) values (?,?,?,?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, cliente.getNome_cliente());
         ps.setLong(2, cliente.getCpf());
         ps.setLong(3, cliente.getRg());
         ps.setString(4, cliente.getTelefone());
         ps.setString(5, cliente.getEmail());
-        ps.setString(6, cliente.getDataNascimento());
-        ps.setString(7, cliente.getEndereco());
-        ps.setInt(8, cliente.getNumero());
-        ps.setString(9, cliente.getEstado());
+        ps.setString(6, cliente.getEndereco());
+        ps.setInt(7, cliente.getNumero());
+        ps.setString(8, cliente.getEstado());
+        ps.execute();
+    }
+
+    public static void updateCliente(Clientes cliente) throws ClassNotFoundException, SQLException {
+        Connection con = ConexaoDB.obterConexao();
+        String query = "update cliente set nome_cliente=?, rg=?, telefone=?, email=?, endereco=?, numero=?, estado=? where cpf=?";
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setString(1, cliente.getNome_cliente());
+        ps.setLong(2, cliente.getCpf());
+        ps.setLong(3, cliente.getRg());
+        ps.setString(4, cliente.getTelefone());
+        ps.setString(5, cliente.getEmail());
+        ps.setString(6, cliente.getEndereco());
+        ps.setInt(7, cliente.getNumero());
+        ps.setString(8, cliente.getEstado());
         ps.execute();
     }
 
@@ -98,16 +94,13 @@ public class ClienteDAO {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 String nome_cliente = rs.getString("nome_cliente");
-
                 Long rg = rs.getLong("rg");
-                String sexo = rs.getString("sexo");
                 String telefone = rs.getString("telefone");
                 String email = rs.getString("email");
-                String dataNascimento = rs.getString("dataNascimento");
                 String endereco = rs.getString("endereco");
                 Integer numero = rs.getInt("numero");
                 String estado = rs.getString("estado");
-                cliente = new Clientes(nome_cliente, cpf, rg, telefone, email, dataNascimento, endereco, numero, estado);
+                cliente = new Clientes(nome_cliente, cpf, rg, telefone, email, endereco, numero, estado);
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).
