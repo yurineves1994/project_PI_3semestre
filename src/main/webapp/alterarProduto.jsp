@@ -14,7 +14,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-4 ">
-                <img class="" src="img/logo.PNG" alt="">
+                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-7 mt-4">
                 <h1 class=" display-5 font-weight-bolder">ALTERAR PRODUTO:${produto.id_produto}</h1>

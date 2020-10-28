@@ -30,6 +30,7 @@ public class RealizarVenda extends HttpServlet {
         venda.setQtdVenda(Integer.parseInt(request.getParameter("qtdVenda")));
         java.util.Date data = new Date();
         venda.setData_venda(data);
+       
         try {
             VendasDAO.addVenda(venda);
             response.sendRedirect("sucesso.jsp");

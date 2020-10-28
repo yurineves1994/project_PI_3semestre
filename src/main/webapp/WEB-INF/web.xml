@@ -52,6 +52,18 @@
         <servlet-name>ListaDeProduto</servlet-name>
         <servlet-class>br.senac.br.servelet.ListaDeProduto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RelatorioPorCliente</servlet-name>
+        <servlet-class>br.senac.br.servelet.RelatorioPorCliente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RelatorioPorFilial</servlet-name>
+        <servlet-class>br.senac.br.servelet.RelatorioPorFilial</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RelatorioCategoriaProduto</servlet-name>
+        <servlet-class>br.senac.br.servelet.RelatorioCategoriaProduto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarCliente</servlet-name>
         <url-pattern>/CadastrarCliente</url-pattern>
@@ -103,6 +115,18 @@
     <servlet-mapping>
         <servlet-name>ListaDeProduto</servlet-name>
         <url-pattern>/ListaDeProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelatorioPorCliente</servlet-name>
+        <url-pattern>/RelatorioPorCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelatorioPorFilial</servlet-name>
+        <url-pattern>/RelatorioPorFilial</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RelatorioCategoriaProduto</servlet-name>
+        <url-pattern>/RelatorioCategoriaProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

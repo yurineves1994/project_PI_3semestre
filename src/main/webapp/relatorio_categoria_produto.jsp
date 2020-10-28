@@ -1,6 +1,6 @@
 <%-- 
-    Document   : relatorios
-    Created on : 08/10/2020, 18:57:56
+    Document   : relatorio_categoria_produto
+    Created on : 28/10/2020, 18:23:16
     Author     : yurin
 --%>
 
@@ -15,24 +15,10 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
         <div class="col-5 ">
-            <img class="" src="img/logo.PNG" alt="">
+           <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
         </div>
         <div class="col-6 mt-4">
-            <h1 class=" display-5 font-weight-bolder">GERAR RELATORIO DE VENDA</h1>
-        </div>
-    </div>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="venda_produto">
-                <label class="form-check-label align-self-center font-weight-bolder h5">VENDA POR
-                    PRODUTO</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="venda_vendedor">
-                <label class="form-check-label align-self-center font-weight-bolder h5">VENDA POR
-                    VENDEDOR</label>
-            </div>
+            <h1 class=" display-5 font-weight-bolder">RELATORIO DE VENDA/CATEGORIA</h1>
         </div>
     </div>
     <div class="table-reponsive container-fluid mt-3">

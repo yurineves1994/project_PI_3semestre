@@ -23,7 +23,7 @@
                 <a href="ListarProdutos" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">LISTAR PRODUTO</a>
                 <a href="ListarClientes" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">LISTAR CLIENTE</a>
                 <a href="ListaDeCliente" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">REALIZAR VENDA</a>
-                <a href="relatorios.jsp" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">GERAR RELATORIOS</a>
+                <a href="escolha_relatorios.jsp" class="btn btn-lg btn-danger col-5 font-weight-bolder h1 pb-3 pt-3">GERAR RELATORIOS</a>
             </div>
 
         </div>

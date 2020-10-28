@@ -16,7 +16,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <img class="" src="img/logo.PNG" alt="">
+                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">LISTAR PRODUTO</h1>

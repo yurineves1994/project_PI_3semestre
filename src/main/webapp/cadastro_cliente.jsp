@@ -15,7 +15,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <img class="" src="img/logo.PNG" alt="">
+                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">CADASTRAR CLIENTE</h1>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="row col-3 justify-content-around">
                     <label class="col-1 align-self-center font-weight-bolder h4">ESTADO</label>
-                    <select class="form-control-lg col-4" name="estados">
+                    <select class="form-control-lg col-4" name="estado">
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
                         <option value="AP">AP</option>

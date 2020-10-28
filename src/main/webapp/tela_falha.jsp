@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <div class="row justify-content-center mt-5 mb-5">
-                <img class="col-8" src="img/logo.PNG" alt="">
+                <a href="index.jsp"><img class="col-8" src="img/logo.PNG" alt=""></a>
             </div>
             <div class="row justify-content-center mt-5 mb-5">
                 <span class="col-12  display-3 text-danger">FALHA NA OPERAÇÃO</span>
