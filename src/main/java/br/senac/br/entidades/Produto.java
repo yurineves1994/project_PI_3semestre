@@ -2,7 +2,7 @@ package br.senac.br.entidades;
 
 public class Produto {
 
-    private Integer idProduto;
+    private Integer id_produto;
     private String nomeProduto;
     private Long precoProduto;
     private Long quantidade;
@@ -11,9 +11,23 @@ public class Produto {
     private boolean disponivel;
 
     //Construtores
-    public Produto(){};
-    public Produto(Integer produto, String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao, boolean disponivel) {
-        this.idProduto = produto;
+    public Produto() {
+    }
+
+    ;
+
+    public Produto(Integer id_produto, String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao) {
+        this.id_produto = id_produto;
+        this.nomeProduto = nomeProduto;
+        this.precoProduto = precoProduto;
+        this.quantidade = quantidade;
+        this.categoria = categoria;
+        this.descricao = descricao;
+    }
+
+    
+    public Produto(Integer id_produto, String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao, boolean disponivel) {
+        this.id_produto = id_produto;
         this.nomeProduto = nomeProduto;
         this.precoProduto = precoProduto;
         this.quantidade = quantidade;
@@ -21,6 +35,10 @@ public class Produto {
         this.descricao = descricao;
         this.disponivel = disponivel;
     }
+    
+    
+    
+   
 
     public Produto(String nomeProduto, Long precoProduto, Long quantidade, String categoria, String descricao, boolean disponivel) {
         this.nomeProduto = nomeProduto;
@@ -38,14 +56,15 @@ public class Produto {
         this.categoria = categoria;
         this.descricao = descricao;
     }
+    
 
-    // Getters e Setters
-    public Integer getIdProduto() {
-        return idProduto;
+    public Integer getId_produto() {
+        return id_produto;
     }
 
-    public void setIdProduto(Integer idProduto) {
-        this.idProduto = idProduto;
+    // Getters e Setters
+    public void setId_produto(Integer id_produto) {    
+        this.id_produto = id_produto;
     }
 
     public String getNomeProduto() {

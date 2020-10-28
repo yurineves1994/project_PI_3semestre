@@ -25,6 +25,7 @@
         <table class="table table-bordered mt-3 table-hover">
             <thead class="thead-dark">
                 <tr>
+                    <th>ID CLIENTE</th>
                     <th>NOME</th>
                     <th>CPF</th>
                     <th>RG</th>
@@ -39,6 +40,7 @@
             <tbody>
                 <c:forEach items="${listaClientes}" var="cliente">
                     <tr>
+                        <td>${cliente.id_cliente}</td>
                         <td>${cliente.nome_cliente}</td>
                         <td>${cliente.cpf}</td>
                         <td>${cliente.rg}</td>
@@ -48,7 +50,7 @@
                         <td>${cliente.numero}</td>
                         <td>${cliente.estado}</td>
                         <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarCliente?cpf=${cliente.cpf}">Alterar</a></td>
-                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirCliente?cpf=${cliente.cpf}">Excluir</a></td>
+                        <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="DeletarCliente?cpf=${cliente.cpf}">Excluir</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

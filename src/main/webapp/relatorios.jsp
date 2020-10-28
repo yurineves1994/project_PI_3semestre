@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="table-reponsive container-fluid mt-3">
-        <table class="table table-md table-bordered">
+        <table class="table table-bordered mt-3 table-hover">
             <thead>
                 <tr>
                     <th class="font-weight-bolder text-danger text-center h5">ID</th>

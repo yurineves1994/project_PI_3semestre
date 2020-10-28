@@ -14,18 +14,17 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author yurin
  */
-public class ListarProdutos extends HttpServlet {
+public class ListaDeProduto extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
         List<Produto> listaProdutos = ProdutoDAO.listarProdutos();
 
         request.setAttribute("listaProdutos", listaProdutos);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listarProdutos.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/cadastro_produto.jsp");
         requestDispatcher.forward(request, response);
     }
-
 }

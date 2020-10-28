@@ -17,8 +17,8 @@ public class AlterarProduto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nomeProduto = request.getParameter("nomeProduto");
-        Produto produto = ProdutoDAO.obterProduto(nomeProduto);
+        Integer id_produto = Integer.parseInt(request.getParameter("id_produto"));
+        Produto produto = ProdutoDAO.obterProduto(id_produto);
 
         request.setAttribute("produto", produto);
 
@@ -29,16 +29,17 @@ public class AlterarProduto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Integer id_produto = Integer.parseInt(request.getParameter("id_produto"));
         String nomeProduto = request.getParameter("nomeProduto");
         Long precoProduto = Long.parseLong(request.getParameter("precoProduto"));
-        Long quantidade = Long.parseLong(request.getParameter("quantidade"));
+        
         String categoria = request.getParameter("categoria");
         String descricao = request.getParameter("descricao");
 
-        Produto produto = ProdutoDAO.obterProduto(nomeProduto);
-
+        Produto produto = ProdutoDAO.obterProduto(id_produto);
+        produto.setNomeProduto(nomeProduto);
         produto.setPrecoProduto(precoProduto);
-        produto.setQuantidade(quantidade);
+        
         produto.setCategoria(categoria);
         produto.setDescricao(descricao);
 

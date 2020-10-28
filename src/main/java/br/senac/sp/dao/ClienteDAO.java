@@ -26,6 +26,7 @@ public class ClienteDAO {
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
+                Integer id_cliente = rs.getInt("id_cliente");
                 String nome_cliente = rs.getString("nome_cliente");
                 Long cpf = rs.getLong("cpf");
                 Long rg = rs.getLong("rg");
@@ -34,7 +35,7 @@ public class ClienteDAO {
                 String endereco = rs.getString("endereco");
                 Integer numero = rs.getInt("numero");
                 String estado = rs.getString("estado");
-                listaClientes.add(new Clientes(nome_cliente, cpf, rg, telefone, email, endereco, numero, estado));
+                listaClientes.add(new Clientes(id_cliente, nome_cliente, cpf, rg, telefone, email, endereco, numero, estado));
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).

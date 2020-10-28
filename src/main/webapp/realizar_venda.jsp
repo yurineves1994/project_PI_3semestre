@@ -25,58 +25,46 @@
         </div>
         <form class="container-fluid mt-5" action="RealizarVenda" method="POST">
             <div class="form-group row justify-content-center">
-                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME DO CLIENTE</label>
-                <input name="nome_cliente" class="form-control-lg col-8 ml-n5" type="text">
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">ID CLIENTE</label>
+
+                <select name="id_cliente" class="form-control-lg col-8 ml-n5" type="text">
+                    <c:forEach items="${listaClientes}" var="cliente">
+                        <option value="${cliente.id_cliente}">${cliente.nome_cliente}</option>
+                    </c:forEach>
+                </select> 
+
             </div>
             <div class="form-group row justify-content-center">
-                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME DO VENDEDOR</label>
-                <select class="form-control-lg col-8 ml-n5" name="nome_vendedor">
-                    <option value="Ian Procopio">Ian Procopio</option>
-                    <option value="João Finasterido">João Finasterido</option>
-                    <option value="Pedro">Pedro</option>
-                    <option value="Fabricio Buarque">Fabricio Buarque</option>
-                    <option value="Fernando Fuande">Fernando Fuande</option>
-                    <option value="Luiza Gueder">Luiza Gueder</option>
-                    <option value="Tomaz Admiltom">Tomaz Admiltom</option>
+                <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME VENDEDOR</label>
+                <select class="form-control-lg col-8 ml-n5" name="id_vendedor" >
+                    <option value="22">Ian Procopio</option>
+                    <option value="23">João Finasterido</option>
+                    <option value="24">Pedro</option>
+                    
                 </select>
             </div>
 
             <div class="form-group row justify-content-around">
-                <div class="row col-7 justify-content-around">
+                <div class="row col-8 justify-content-center">
 
-                    <label class="col-6 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
+                    <label class="col-5 align-self-center font-weight-bolder h3 text-danger" >NOME DO PRODUTO</label>
 
-                    <select class="form-control-lg col-6" name="nomeProduto">
+                    <select class="form-control-lg col-6" name="id_produto">
                         <c:forEach items="${listaProdutos}" var="produto">
-                            <option>${produto.nomeProduto}</option>
+                            <option value="${produto.id_produto}">${produto.nomeProduto}</option>
                         </c:forEach>
                     </select>
 
                 </div>
-                <div class="row col-3 justify-content-around">
-                    <label class="col-8 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
-                    <input name="qtdVenda" class="form-control-lg col-3" type="number">
-                </div>
-                <div class="row col-2 justify-content-center">
-                    <a href="#" class="btn btn-lg btn-danger col-12 AdicionarACompra?nome_cliente=${nome_cliente}" font-weight-bolder h2 pb-2 pt-2 ml-n5">ADICIONAR</a>
-                </div>
+                <div class="row col-4 justify-content-center">
+                    <label class="col-6 align-self-center font-weight-bolder h3 text-danger">QUANTIDADE</label>
+                    <input name="qtdVenda" class="form-control-lg col-4" type="number">
+                </div>               
             </div>
-
-            <div class="form-group row justify-content-end">
-
-                <div class="row col-2 justify-content-start mr-4 ml-2">
-                    <a href="#" class="btn btn-lg btn-danger col-12 font-weight-bolder h3 ">REMOVER</a>
-                </div>
-            </div>
-            &nbsp;
-            <div class="form-group row justify-content-end">
-                <span class="col-2 align-self-center font-weight-bolder h3 text-danger">VALOR TOTAL:</span>
-                <span class="form-control-lg col-2 mr-3"></span>
-            </div>
-
+            &nbsp;   
             <div class="container-fluid">
                 <div class="row mt-5 justify-content-around">
-                    <input class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2" type="submit"
+                    <input class="btn btn-lg btn-danger col-5 font-weight-bolder h3 pb-2 pt-2" type="submit"
                            value="REALIZAR VENDA">
                     <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
                        >CANCELAR</a>

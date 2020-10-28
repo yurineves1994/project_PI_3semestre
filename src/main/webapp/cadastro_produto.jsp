@@ -33,12 +33,13 @@
                 </div>
                 <div class="row col-4 justify-content-around">
                     <label class="col-4 align-self-center font-weight-bolder h3">CATEGORIA</label>
-                    <select class="form-control-lg col-4" name="categoria">
-                        <option value="Manga">Mangá</option>
-                        <option value="Colecionaveis">Colecionaveis</option>
-                        <option value="Camisetas">Camisetas</option>
 
-                    </select>
+                    <select class="form-control-lg col-4" name="categoria" type="text">
+                        <option>Manga</option>
+                        <option>Camisetas</option>
+                        <option>Posters</option> 
+                        <option>Ingressos de eventos</option>
+                    </select>   
                 </div>
                 <div class="row col-3 justify-content-between">
                     <label class="col-5 align-self-center font-weight-bolder h3">QUANTIDADE</label>

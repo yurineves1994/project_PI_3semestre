@@ -33,6 +33,7 @@ public class AlterarCliente extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String nome = request.getParameter("nome");
         Long cpf = Long.parseLong(request.getParameter("cpf"));
         Long rg = Long.parseLong(request.getParameter("rg"));

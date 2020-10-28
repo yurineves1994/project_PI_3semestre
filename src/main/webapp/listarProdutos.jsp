@@ -25,6 +25,7 @@
         <table class="table table-bordered mt-3 table-hover">
             <thead class="thead-dark">
                 <tr>
+                    <th>ID PRODUTO</th>
                     <th>NOME DO PRODUTO</th>
                     <th>PREÇO</th>
                     <th>QUANTIDADE</th>
@@ -36,14 +37,15 @@
             <tbody>
             <c:forEach items="${listaProdutos}" var="produto">
                 <tr>
+                    <td>${produto.id_produto}</td>
                     <td>${produto.nomeProduto}</td>
                     <td>${produto.precoProduto}</td>
                     <td>${produto.quantidade}</td>
                     <td>${produto.categoria}</td>
                     <td>${produto.descricao}</td>
 
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?nomeProduto=${produto.nomeProduto}">ATUALIZAR</a></td>
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="ExcluirProduto?nomeProduto=${produto.nomeProduto}">EXCLUIR</a></td>
+                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?id_produto=${produto.id_produto}">ATUALIZAR</a></td>
+                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="DeletarProduto?id_produto=${produto.id_produto}">EXCLUIR</a></td>
                 </tr>
             </c:forEach>
         </tbody>

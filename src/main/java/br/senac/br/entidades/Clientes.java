@@ -15,6 +15,19 @@ public class Clientes {
     public Clientes() {
     }
 
+    public Clientes(Integer id_cliente, String nome_cliente, Long cpf, Long rg, String telefone, String email, String endereco, Integer numero, String estado) {
+        this.id_cliente = id_cliente;
+        this.nome_cliente = nome_cliente;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.telefone = telefone;
+        this.email = email;
+        this.endereco = endereco;
+        this.numero = numero;
+        this.estado = estado;
+    }
+    
+
     public Clientes(String nome_cliente, Long cpf, Long rg, String telefone, String email, String endereco, Integer numero, String estado) {
         this.nome_cliente = nome_cliente;
         this.cpf = cpf;
