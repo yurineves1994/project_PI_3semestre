@@ -22,18 +22,32 @@
         </div>
     </div>
     <div class="table-reponsive container-fluid mt-3">
-        <table class="table table-bordered mt-3 table-hover">
-            <thead>
-                <tr>
-                    <th class="font-weight-bolder text-danger text-center h5">ID</th>
-                    <th class="font-weight-bolder text-danger text-center h5">NOME</th>
-                    <th class="font-weight-bolder text-danger text-center h5">QUANTIDADE</th>
-                    <th class="font-weight-bolder text-danger text-center h5">VALOR TOTAL</th>
-                </tr>
-            </thead>
+            <table class="table table-bordered mt-3 table-hover">
+                <thead>
+                    <tr>
+                        <th class="font-weight-bolder text-danger text-center h5">FILIAL</th>
+                        <th class="font-weight-bolder text-danger text-center h5">CLIENTE</th>
+                        <th class="font-weight-bolder text-danger text-center h5">VENDEDOR</th>
+                        <th class="font-weight-bolder text-danger text-center h5">PRODUTO</th>
+                        <th class="font-weight-bolder text-danger text-center h5">QUANTIDADE</th>
+                        <th class="font-weight-bolder text-danger text-center h5">DATA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${relatorioPorFilial}" var="relatorio">
+                    <tr>
+                        <td>${relatorio.filial}</td>
+                        <td>${relatorio.cliente}</td>
+                        <td>${relatorio.vendedor}</td>
+                        <td>${relatorio.produto}</td>
+                        <td>${relatorio.qtdVenda}</td>
+                        <td>${relatorio.data_venda}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
 
-        </table>
+            </table>
 
-    </div>
+        </div>
     </body>
 </html>

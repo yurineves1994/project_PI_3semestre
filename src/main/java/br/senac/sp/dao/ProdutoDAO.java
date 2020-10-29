@@ -57,13 +57,12 @@ public class ProdutoDAO {
         Connection con = ConexaoDB.obterConexao();
         String query = "update produto set nomeProduto=?, precoProduto=?, quantidade=?, categoria=?, descricao=? where id_produto=?";
         PreparedStatement ps = con.prepareStatement(query);
-        ps.setInt(1, produto.getId_produto());
-        ps.setString(2, produto.getNomeProduto());
-        ps.setLong(3, produto.getPrecoProduto());
-        ps.setLong(4, produto.getQuantidade());
-        ps.setString(5, produto.getCategoria());
-        ps.setString(6, produto.getDescricao());
-
+        ps.setString(1, produto.getNomeProduto());
+        ps.setLong(2, produto.getPrecoProduto());
+        ps.setLong(3, produto.getQuantidade());
+        ps.setString(4, produto.getCategoria());
+        ps.setString(5, produto.getDescricao());
+        ps.setInt(6, produto.getId_produto());
         ps.execute();
     }
 
@@ -98,7 +97,7 @@ public class ProdutoDAO {
             Logger.getLogger(ServletBD.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
-        
+
         return produto;
     }
 }

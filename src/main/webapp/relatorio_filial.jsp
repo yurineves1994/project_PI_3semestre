@@ -43,7 +43,8 @@
                         <td>${relatorio.qtdVenda}</td>
                         <td>${relatorio.data_venda}</td>
                     </tr>
-                    </tbody>
+                </c:forEach>
+                </tbody>
 
             </table>
 

@@ -66,14 +66,14 @@ public class ClienteDAO {
         Connection con = ConexaoDB.obterConexao();
         String query = "update cliente set nome_cliente=?, rg=?, telefone=?, email=?, endereco=?, numero=?, estado=? where cpf=?";
         PreparedStatement ps = con.prepareStatement(query);
-        ps.setString(1, cliente.getNome_cliente());
-        ps.setLong(2, cliente.getCpf());
-        ps.setLong(3, cliente.getRg());
-        ps.setString(4, cliente.getTelefone());
-        ps.setString(5, cliente.getEmail());
-        ps.setString(6, cliente.getEndereco());
-        ps.setInt(7, cliente.getNumero());
-        ps.setString(8, cliente.getEstado());
+        ps.setString(1, cliente.getNome_cliente()); 
+        ps.setLong(2, cliente.getRg());
+        ps.setString(3, cliente.getTelefone());
+        ps.setString(4, cliente.getEmail());
+        ps.setString(5, cliente.getEndereco());
+        ps.setInt(6, cliente.getNumero());
+        ps.setString(7, cliente.getEstado());
+        ps.setLong(8, cliente.getCpf());
         ps.execute();
     }
 

@@ -1,7 +1,6 @@
 package br.senac.br.entidades;
 
 import java.util.Date;
-import java.util.List;
 
 public class Vendas {
 
@@ -10,7 +9,6 @@ public class Vendas {
     private Vendedor vendedor;
     private String filial_vendedor;
     private Produto produto;
-    private List<Produto> listaProduto;
     private Integer qtdVenda;
     private Date data_venda;
 
@@ -18,23 +16,18 @@ public class Vendas {
         vendedor = new Vendedor();
         cliente = new Clientes();
         produto = new Produto();
-        
     }
 
-    public Vendas(String filial_vendedor, Clientes cliente, Integer idVenda, Vendedor vendedor, Produto produto, List<Produto> listaProduto, Integer qtdVenda, Date data_venda) {
+    public Vendas(String filial_vendedor, Clientes cliente, Integer idVenda, Vendedor vendedor, Produto produto, Integer qtdVenda, Date data_venda) {
         this.cliente = cliente;
         this.idVenda = idVenda;
         this.vendedor = vendedor;
         this.filial_vendedor = filial_vendedor;
         this.produto = produto;
-        this.listaProduto = listaProduto;
         this.qtdVenda = qtdVenda;
         this.data_venda = data_venda;
     }
-    
-    
-    
-    
+
     public Vendas(String filial_vendedor, Vendedor id_vendedor, Integer qtdVenda, Produto id_produto, Date data_venda) {
         this.vendedor = id_vendedor;
         this.qtdVenda = qtdVenda;
@@ -52,17 +45,16 @@ public class Vendas {
     public Clientes getCliente() {
         return cliente;
     }
-    
 
     // METODOS GETTERS E SETTERS
- public String getFilial_vendedor() {
+    public String getFilial_vendedor() {
         return filial_vendedor;
     }
 
     public void setFilial_vendedor(String filial_vendedor) {
         this.filial_vendedor = filial_vendedor;
     }
-    
+
     public void setCliente(Clientes cliente) {
         this.cliente = cliente;
     }
