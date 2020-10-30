@@ -37,9 +37,9 @@
             <div class="form-group row justify-content-center">
                 <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME VENDEDOR</label>
                 <select class="form-control-lg col-8 ml-n5" name="id_vendedor" >
-                    <option value="22">Ian Procopio</option>
-                    <option value="23">João Finasterido</option>
-                    <option value="24">Pedro</option>
+                    <option value="1">Ian Procopio</option>
+                    <option value="2">João Finasterido</option>
+                    <option value="3">Pedro</option>
                     
                 </select>
             </div>

@@ -8,29 +8,24 @@ public class Relatorios {
     private String cliente;
     private String vendedor;
     private String produto;
-    private Integer venda;
+    private String categoria_produto;
+    private Integer id_venda;
     private String filial;
-    private Long qtdVenda;
+    private Integer qtdVenda;
     private Date data_venda;
 
-    public Relatorios(String filial, Integer venda, String cliente, String vendedor, String produto, Date data_venda) {
-        this.cliente = cliente;
-        this.vendedor = vendedor;
-        this.produto = produto;
-        this.filial = filial;
-        this.data_venda = data_venda;
+    public Relatorios() {
     }
- 
-    public Relatorios(String filial, String cliente, String vendedor, String produto, Long qtdVenda, Date data_venda) {
+
+    public Relatorios(String filial, Integer id_venda, String cliente, String vendedor, String produto, Date data_venda) {
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.produto = produto;
         this.filial = filial;
-        this.qtdVenda = qtdVenda;
         this.data_venda = data_venda;
     }
 
-    public Relatorios(String cliente, String vendedor, String produto, Long qtdVenda, Date data_venda) {
+    public Relatorios(String cliente, String vendedor, String produto, Integer qtdVenda, Date data_venda) {
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.produto = produto;
@@ -38,13 +33,21 @@ public class Relatorios {
         this.data_venda = data_venda;
     }
 
-    public Relatorios(Integer id_relatorio, String cliente, String vendedor, String produto, Long qtdVenda, Date data_venda) {
+    public Relatorios(Integer id_relatorio, String cliente, String vendedor, String produto, Integer qtdVenda, Date data_venda) {
         this.id_relatorio = id_relatorio;
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.produto = produto;
         this.qtdVenda = qtdVenda;
         this.data_venda = data_venda;
+    }
+
+    public Integer getId_venda() {
+        return id_venda;
+    }
+
+    public void setId_venda(Integer id_venda) {
+        this.id_venda = id_venda;
     }
 
     public Integer getId_relatorio() {
@@ -55,6 +58,38 @@ public class Relatorios {
         this.id_relatorio = id_relatorio;
     }
 
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public String getProduto() {
+        return produto;
+    }
+
+    public void setProduto(String produto) {
+        this.produto = produto;
+    }
+
+    public String getCategoria_produto() {
+        return categoria_produto;
+    }
+
+    public void setCategoria_produto(String categoria_produto) {
+        this.categoria_produto = categoria_produto;
+    }
+
     public String getFilial() {
         return filial;
     }
@@ -63,35 +98,11 @@ public class Relatorios {
         this.filial = filial;
     }
 
-    public String getId_cliente() {
-        return cliente;
-    }
-
-    public void setId_cliente(String cliente) {
-        this.cliente = cliente;
-    }
-
-    public String getId_vendedor() {
-        return vendedor;
-    }
-
-    public void setId_vendedor(String vendedor) {
-        this.vendedor = vendedor;
-    }
-
-    public String getId_produto() {
-        return produto;
-    }
-
-    public void setId_produto(String produto) {
-        this.produto = produto;
-    }
-
-    public Long getQtdVenda() {
+    public Integer getQtdVenda() {
         return qtdVenda;
     }
 
-    public void setQtdVenda(Long qtdVenda) {
+    public void setQtdVenda(Integer qtdVenda) {
         this.qtdVenda = qtdVenda;
     }
 

@@ -17,7 +17,22 @@ import java.util.logging.Logger;
  *
  * @author yurin
  */
+    
 public class RelatoriosDAO {
+//    public static void addRelatorio(Vendas venda) throws SQLException, ClassNotFoundException {
+//        Connection con = ConexaoDB.obterConexao();
+//        String query = "insert into relatorio(id_cliente, id_vendedor , id_produto, qtdVenda, filial, categoria_produto, data_venda) values (?,?,?,?,?,?,?)";
+//        PreparedStatement ps = con.prepareStatement(query);
+//        ps.setInt(1, venda.getCliente().getId_cliente());
+//        ps.setInt(2, venda.getVendedor().getId_vendedor());
+//        ps.setInt(3, venda.getProduto().getId_produto());
+//        ps.setInt(4, venda.getQtdVenda());  
+//        ps.setString(5, venda.getFilial_vendedor());  
+//        ps.setString(6, venda.getProduto().getCategoria());
+//        java.sql.Timestamp data_venda = new java.sql.Timestamp(venda.getData_venda().getTime());
+//        ps.setTimestamp(7, data_venda);
+//        ps.execute();
+//    }
 
     public static List<Relatorios> RelatorioPorCliente() {
         List<Relatorios> relatorioCliente = new ArrayList();
@@ -38,25 +53,24 @@ public class RelatoriosDAO {
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).
-                    log(Level.SEVERE, null, ex);
+                   log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(ServletBD.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
         return relatorioCliente;
     }
-
-    public static List<Relatorios> RelatorioPorFilial() {
-        List<Relatorios> relarioFilial = new ArrayList();
+   public static List<Relatorios> RelatorioPorFilial() {
+      List<Relatorios> relarioFilial = new ArrayList();
 
         try {
-            Connection con = ConexaoDB.obterConexao();
+           Connection con = ConexaoDB.obterConexao();
             String query = "select vendedor.filial, venda.id_venda, cliente.nome_cliente, vendedor.nome_vendedor, produto.nomeProduto, venda.data_venda from  venda inner join cliente on venda.id_cliente = cliente.id_cliente inner join vendedor on venda.id_vendedor = vendedor.id_vendedor inner join produto on venda.id_produto = produto.id_produto order by vendedor.filial;";
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 String filial = rs.getString("filial");
-                Integer venda = rs.getInt("id_venda");
+               Integer venda = rs.getInt("id_venda");
                 String cliente = rs.getString("nome_cliente");
                 String vendedor = rs.getString("nome_vendedor");
                 String produto = rs.getString("nomeProduto");
@@ -69,7 +83,7 @@ public class RelatoriosDAO {
                     log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(ServletBD.class.getName()).
-                    log(Level.SEVERE, null, ex);
+                   log(Level.SEVERE, null, ex);
         }
         return relarioFilial;
     }
@@ -98,6 +112,6 @@ public class RelatoriosDAO {
             Logger.getLogger(ServletBD.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
-        return relarioFilial;
+       return relarioFilial;
     }
 }

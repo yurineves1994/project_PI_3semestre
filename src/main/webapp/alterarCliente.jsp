@@ -62,7 +62,7 @@
                 "
                 <div class="row col-3 justify-content-around">
                     <label class="col-1 align-self-center font-weight-bolder h4">ESTADO</label>
-                    <select class="form-control-lg col-4" value="${cliente.estado}" name="estados">
+                    <select class="form-control-lg col-4" value="${cliente.estado}" name="estado">
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
                         <option value="AP">AP</option>

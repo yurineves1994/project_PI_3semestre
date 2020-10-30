@@ -1,6 +1,8 @@
 package br.senac.br.servelet;
 
+import br.senac.br.entidades.Relatorios;
 import br.senac.br.entidades.Vendas;
+import br.senac.sp.dao.RelatoriosDAO;
 import br.senac.sp.dao.VendasDAO;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -23,16 +25,18 @@ public class RealizarVenda extends HttpServlet {
         String qtdVenda = request.getParameter("qtdVenda");       
               
         Vendas venda = new Vendas();
+       
         
-        venda.getCliente().setId_cliente(Integer.parseInt(request.getParameter("id_cliente")));
-        venda.getVendedor().setId_vendedor(Integer.parseInt(request.getParameter("id_vendedor")));
-        venda.getProduto().setId_produto(Integer.parseInt(request.getParameter("id_produto")));
-        venda.setQtdVenda(Integer.parseInt(request.getParameter("qtdVenda")));
+        venda.getCliente().setId_cliente(Integer.parseInt(request.getParameter("id_cliente"))); 
+        venda.getVendedor().setId_vendedor(Integer.parseInt(request.getParameter("id_vendedor")));  
+        venda.getProduto().setId_produto(Integer.parseInt(request.getParameter("id_produto"))); 
+        venda.setQtdVenda(Integer.parseInt(request.getParameter("qtdVenda"))); 
         java.util.Date data = new Date();
         venda.setData_venda(data);
        
+       
         try {
-            VendasDAO.addVenda(venda);
+            VendasDAO.addVenda(venda);            
             response.sendRedirect("sucesso.jsp");
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).
