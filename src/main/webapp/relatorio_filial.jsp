@@ -4,6 +4,7 @@
     Author     : yurin
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,6 +25,7 @@
         <div class="table-reponsive container-fluid mt-3">
             <table class="table table-bordered mt-3 table-hover">
                 <thead>
+
                     <tr>
                         <th class="font-weight-bolder text-danger text-center h5">FILIAL</th>
                         <th class="font-weight-bolder text-danger text-center h5">CLIENTE</th>
@@ -34,16 +36,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${relatorioPorFilial}" var="relatorio">
-                    <tr>
-                        <td>${relatorio.filial}</td>
-                        <td>${relatorio.cliente}</td>
-                        <td>${relatorio.vendedor}</td>
-                        <td>${relatorio.produto}</td>
-                        <td>${relatorio.qtdVenda}</td>
-                        <td>${relatorio.data_venda}</td>
-                    </tr>
-                </c:forEach>
+                    <c:forEach items="${relatorioPorFilial}" var="relatorio">
+                        <tr>
+                            <td>${relatorio.filial}</td>
+                            <td>${relatorio.cliente}</td>
+                            <td>${relatorio.vendedor}</td>
+                            <td>${relatorio.produto}</td>
+                            <td>${relatorio.qtdVenda}</td>
+                            <td>${relatorio.data_venda}</td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
 
             </table>

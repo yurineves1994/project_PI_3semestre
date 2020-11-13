@@ -42,6 +42,14 @@ public class Relatorios {
         this.data_venda = data_venda;
     }
 
+    public Relatorios(Integer venda, String produto, String cliente, String vendedor, Date data_venda) {
+        this.id_relatorio = venda;
+        this.produto = produto;
+        this.cliente = cliente;
+        this.vendedor = vendedor;
+        this.data_venda = data_venda;
+    }
+
     public Integer getId_venda() {
         return id_venda;
     }
