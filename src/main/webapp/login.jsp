@@ -33,4 +33,5 @@
                 <a class="btn btn-lg btn-danger col-5 offset-1 font-weight-bolder h3 pb-2 pt-2">CANCELAR</a>
             </div>
         </form>
+    </body>
 </html>
