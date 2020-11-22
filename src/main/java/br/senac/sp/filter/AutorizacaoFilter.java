@@ -10,6 +10,9 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -26,13 +29,15 @@ public class AutorizacaoFilter implements Filter {
     
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
-        
-        System.out.println("FILTRO");
-      
-        
-
-        
-        
+       HttpServletRequest httpRequest = (HttpServletRequest) request; 
+       HttpServletResponse httpRespose = (HttpServletResponse) response;
+       
+      HttpSession sessao = httpRequest.getSession();
+       
+      if(sessao.getAttribute("usuario") == null){
+          httpRespose.sendRedirect(httpRequest.getContextPath() + "/login.jsp");
+      }
+    
     }    
     
     private void doAfterProcessing(ServletRequest request, ServletResponse response)

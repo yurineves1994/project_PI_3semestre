@@ -3,6 +3,7 @@ package br.senac.br.entidades;
 public class Vendedor {
     private String nome_vendedor;
     private Integer id_vendedor;
+    private String usuario;
     private String senha;
     private String cargo;
     private String filial;
@@ -26,6 +27,33 @@ public class Vendedor {
         this.departamento = departamento;
     }
 
+    public Vendedor(String nome_vendedor, String senha, String cargo, String filial, String departamento) {
+        this.nome_vendedor = nome_vendedor;
+        this.senha = senha;
+        this.cargo = cargo;
+        this.filial = filial;
+        this.departamento = departamento;
+    }
+
+    public Vendedor(String nome_vendedor, String usuario, String senha, String cargo, String filial, String departamento) {
+        this.nome_vendedor = nome_vendedor;
+        this.usuario = usuario;
+        this.senha = senha;
+        this.cargo = cargo;
+        this.filial = filial;
+        this.departamento = departamento;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    
+    
     public String getNome_vendedor() {
         return nome_vendedor;
     }

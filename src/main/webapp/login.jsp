@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%@include file="header.jsp" %>
+    <%@include file="header.jsp" %> 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mangá Store</title>
@@ -18,14 +18,14 @@
                 <img class="col-6  offset-3" src="img/logo.PNG" alt="">
             </div>
         </div>
-        <form class="container" action="Login" method="POST">
+        <form class="container" action="LoginServlet" method="POST">
             <div class="form-group row justify-content-around">
                 <label class="col-2 align-self-center text-danger font-weight-bolder h1">USUARIO</label>
-                <input class="form-control-lg col-8 border-danger" type="text">
+                <input name="login" class="form-control-lg col-8 border-danger" type="text">
             </div>
             <div class="form-group row justify-content-around">
                 <label class="col-2 align-self-center text-danger font-weight-bolder h1">SENHA</label>
-                <input class="form-control-lg col-8 border-danger " type="password">
+                <input name="senha" class="form-control-lg col-8 border-danger " type="password">
             </div>
             <div class="row text-center mt-5 justify-content-between">
                 <input class="btn btn-lg btn-danger col-5 offset-1 font-weight-bolder h3 pb-2 pt-2" type="submit"
