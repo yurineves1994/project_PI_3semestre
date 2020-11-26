@@ -3,7 +3,7 @@
     Created on : 08/10/2020, 18:59:08
     Author     : yurin
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
             </div>
             <div class="row justify-content-center mt-5 mb-5">
                 <a class="btn btn-lg btn-danger col-12  font-weight-bolder h4 pb-2 pt-2"  
-                   href="index.jsp">VOLTAR</a>
+                   href="<c:url value="/protegido/index.jsp"/>">VOLTAR</a>
             </div>
 
 

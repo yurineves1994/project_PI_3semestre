@@ -22,7 +22,7 @@ public class AlterarProduto extends HttpServlet {
 
         request.setAttribute("produto", produto);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/alterarProduto.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/alterarProduto.jsp");
         requestDispatcher.forward(request, response);
     }
 

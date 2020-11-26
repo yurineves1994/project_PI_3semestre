@@ -3,6 +3,7 @@
     Created on : 17/10/2020, 21:04:08
     Author     : yurin
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,13 +15,13 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-4 ">
-                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
+                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-7 mt-4">
                 <h1 class=" display-5 font-weight-bolder">ALTERAR PRODUTO:${produto.id_produto}</h1>
             </div>
         </div>
-        <form class="container-fluid mt-5" action="AlterarProduto" method="POST">
+        <form class="container-fluid mt-5" action="<c:url value="/AlterarProduto"/>" method="POST">
             <div class=" form-group row justify-content-center">
                 <div class=" row col-7 justify-content-around">
                     <label class="col-3 align-self-center font-weight-bolder h3">NOME DO PRODUTO</label>

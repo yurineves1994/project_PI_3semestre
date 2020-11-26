@@ -23,7 +23,7 @@ public class RelatorioPorCliente extends HttpServlet {
 
         request.setAttribute("relatorioPorClientes", relatorioPorClientes);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/relatorio_cliente.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/admin/relatorio_cliente.jsp");
         requestDispatcher.forward(request, response);
     }
 }

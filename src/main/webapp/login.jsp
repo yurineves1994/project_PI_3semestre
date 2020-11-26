@@ -3,7 +3,7 @@
     Created on : 08/10/2020, 20:18:07
     Author     : yurin
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +13,13 @@
         <title>Mangá Store</title>
     </head>
     <body>
+        <c:if test="${not empty param.erro}">
+            <div class="container alert alert-danger" role="alert">
+                Usuario/Senha Invalida!
+            </div>
+
+        </c:if>
+        
         <div class="container">
             <div class="row justify-content-between mb-5 mt-5">
                 <img class="col-6  offset-3" src="img/logo.PNG" alt="">

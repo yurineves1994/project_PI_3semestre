@@ -17,13 +17,13 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
+                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-5 mt-4">
                 <h1 class=" display-4 font-weight-bolder">REALIZAR VENDA</h1>
             </div>
         </div>
-        <form class="container-fluid mt-5" action="RealizarVenda" method="POST">
+        <form class="container-fluid mt-5" action="<c:url value="/RealizarVenda"/>" method="POST">
             <div class="form-group row justify-content-center">
                 <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">ID CLIENTE</label>
 

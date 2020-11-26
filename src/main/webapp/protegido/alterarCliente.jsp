@@ -3,7 +3,7 @@
     Created on : 17/10/2020, 20:40:18
     Author     : yurin
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
                 <h1 class=" display-5 font-weight-bolder">ALTERAR CLIENTE: ${cliente.nome_cliente}</h1>
             </div>
         </div>
-        <form class="container-fluid mt-5" action="AlterarCliente" method="POST">
+        <form class="container-fluid mt-5" action="<c:url value="/AlterarCliente"/>" method="POST">
             <div class="form-group row justify-content-center">
                 <label class="col-1 align-self-center font-weight-bolder h4">NOME</label>
                 <input name="nome" value="${cliente.nome_cliente}" class="form-control-lg col-10" type="text" required="true">

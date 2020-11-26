@@ -1,5 +1,6 @@
 package br.senac.sp.filter;
 
+import br.senac.br.entidades.Vendedor;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -36,6 +37,11 @@ public class AutorizacaoFilter implements Filter {
        
       if(sessao.getAttribute("usuario") == null){
           httpRespose.sendRedirect(httpRequest.getContextPath() + "/login.jsp");
+      }
+      Vendedor usuario = (Vendedor) sessao.getAttribute("usuario");
+      String url = httpRequest.getRequestURI();
+      if(url.contains("/admin/")&& !usuario.isAdmin()){
+          httpRespose.sendRedirect(httpRequest.getContextPath() + "/tela_falha.jsp");
       }
     
     }    

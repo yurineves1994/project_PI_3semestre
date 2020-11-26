@@ -23,7 +23,7 @@ public class RelatorioCategoriaProduto extends HttpServlet {
 
         request.setAttribute("relatorioPorProduto", relatorioPorProduto);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/relatorio_categoria_produto.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/admin/relatorio_categoria_produto.jsp");
         requestDispatcher.forward(request, response);
     }
 }

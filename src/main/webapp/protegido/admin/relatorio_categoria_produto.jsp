@@ -8,7 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%@include file="../header.jsp" %>
+    <%@include file="../../header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mangá Store</title>
@@ -16,7 +16,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
+                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-5 font-weight-bolder">RELATORIO DE VENDA/CATEGORIA</h1>

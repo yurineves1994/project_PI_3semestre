@@ -16,7 +16,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
+                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">LISTAR PRODUTO</h1>
@@ -31,24 +31,28 @@
                     <th>QUANTIDADE</th>
                     <th>CATEGORIA</th>
                     <th>DESCRIÇÃO</th>
-                    <th colspan="2" style="text-align: center">BOTÕES</th>
+                        <c:if test="${sessionScope.usuario.admin}">
+                        <th colspan="2" style="text-align: center">BOTÕES</th>
+                        </c:if>
                 </tr>
             </thead>
             <tbody>
-            <c:forEach items="${listaProdutos}" var="produto">
-                <tr>
-                    <td>${produto.id_produto}</td>
-                    <td>${produto.nomeProduto}</td>
-                    <td>${produto.precoProduto}</td>
-                    <td>${produto.quantidade}</td>
-                    <td>${produto.categoria}</td>
-                    <td>${produto.descricao}</td>
+                <c:forEach items="${listaProdutos}" var="produto">
+                    <tr>
+                        <td>${produto.id_produto}</td>
+                        <td>${produto.nomeProduto}</td>
+                        <td>${produto.precoProduto}</td>
+                        <td>${produto.quantidade}</td>
+                        <td>${produto.categoria}</td>
+                        <td>${produto.descricao}</td>
+                        <c:if test="${sessionScope.usuario.admin}">
+                            <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?id_produto=${produto.id_produto}">ATUALIZAR</a></td>
+                            <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="DeletarProduto?id_produto=${produto.id_produto}">EXCLUIR</a></td>
+                        </c:if>
 
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?id_produto=${produto.id_produto}">ATUALIZAR</a></td>
-                    <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="DeletarProduto?id_produto=${produto.id_produto}">EXCLUIR</a></td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
-</body>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </body>
 </html>

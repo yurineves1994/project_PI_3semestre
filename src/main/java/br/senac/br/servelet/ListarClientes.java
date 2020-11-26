@@ -23,7 +23,7 @@ public class ListarClientes extends HttpServlet {
 
         request.setAttribute("listaClientes", listaClientes);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/listarCliente.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/listarCliente.jsp");
         requestDispatcher.forward(request, response);
     }
 

@@ -28,7 +28,7 @@ public class RelatorioPorFilial extends HttpServlet {
 
         request.setAttribute("relatorioPorFilial", relatorioPorFilial);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/relatorio_filial.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/admin/relatorio_filial.jsp");
         requestDispatcher.forward(request, response);
     }
 }

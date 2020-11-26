@@ -26,7 +26,7 @@ public class AlterarCliente extends HttpServlet {
 
         request.setAttribute("cliente", cliente);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/alterarCliente.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/alterarCliente.jsp");
         requestDispatcher.forward(request, response);
     }
 

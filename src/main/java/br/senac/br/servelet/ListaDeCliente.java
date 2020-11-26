@@ -27,7 +27,7 @@ public class ListaDeCliente extends HttpServlet {
         request.setAttribute("listaClientes", listaClientes);
         request.setAttribute("listaProdutos", listaProdutos);
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/realizar_venda.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/protegido/realizar_venda.jsp");
         requestDispatcher.forward(request, response);
     }
 }

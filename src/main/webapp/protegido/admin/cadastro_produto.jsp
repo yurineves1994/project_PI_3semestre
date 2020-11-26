@@ -3,11 +3,11 @@
     Created on : 08/10/2020, 18:57:07
     Author     : yurin
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%@include file="../header.jsp" %>
+    <%@include file="../../header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mangá Store</title>
@@ -15,13 +15,13 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="index.jsp"><img class="" src="img/logo.PNG" alt=""> </a>
+                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">CADASTRAR PRODUTO</h1>
             </div>
         </div>
-        <form class="container-fluid mt-5" action="CadastrarProduto" method="POST">
+        <form class="container-fluid mt-5" action="<c:url value="/CadastrarProduto"/>" method="POST">
             <div class="form-group row justify-content-center">
                 <label class="col-3 align-self-center font-weight-bolder h3 ml-n4">NOME DO PRODUTO</label>
                 <input name="nomeProduto" class="form-control-lg col-8" type="text">
