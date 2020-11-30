@@ -17,7 +17,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
+                <a href="<c:url value="/index.jsp"/>" <img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
             </div>
             <div class="col-5 mt-4">
                 <h1 class=" display-4 font-weight-bolder">REALIZAR VENDA</h1>
@@ -32,7 +32,7 @@
                         <option value="${cliente.id_cliente}">${cliente.nome_cliente}</option>
                     </c:forEach>
                 </select> 
-
+                
             </div>
             <div class="form-group row justify-content-center">
                 <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME VENDEDOR</label>
@@ -40,7 +40,6 @@
                     <option value="1">Ian Procopio</option>
                     <option value="2">João Finasterido</option>
                     <option value="3">Pedro</option>
-                    
                 </select>
             </div>
 
@@ -66,7 +65,7 @@
                 <div class="row mt-5 justify-content-around">
                     <input class="btn btn-lg btn-danger col-5 font-weight-bolder h3 pb-2 pt-2" type="submit"
                            value="REALIZAR VENDA">
-                    <a href="index.jsp" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
+                    <a href="<c:url value="/index.jsp"/>" class="btn btn-lg btn-danger col-5  font-weight-bolder h3 pb-2 pt-2"
                        >CANCELAR</a>
                 </div>
             </div>

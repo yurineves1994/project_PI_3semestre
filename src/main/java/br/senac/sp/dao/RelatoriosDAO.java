@@ -47,7 +47,7 @@ public class RelatoriosDAO {
                 String produto = rs.getString("nomeProduto");
                 Date data_venda = rs.getDate("data_venda");
 
-                relatorioCliente.add(new Relatorios(venda, cliente, vendedor, produto, data_venda));
+                relatorioCliente.add(new Relatorios(venda, produto, cliente, vendedor, data_venda));
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletBD.class.getName()).

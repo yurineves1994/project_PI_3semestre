@@ -15,7 +15,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-4 ">
-                <a href="index.jsp"><img class="" src="../img/logo.PNG" alt=""> </a>
+                <a href="<c:url value="/index.jsp"/>" <img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
             </div>
             <div class="col-7 mt-4">
                 <h1 class=" display-5 font-weight-bolder">ALTERAR CLIENTE: ${cliente.nome_cliente}</h1>
@@ -100,7 +100,7 @@
                             type="submit">ALTERAR CLIENTE</button>
 
                     <a class="btn btn-lg btn-danger col-5 font-weight-bolder h4 pb-2 pt-2" 
-                       href="index.jsp">CANCELAR</a>
+                       href="<c:url value="/index.jsp"/>">CANCELAR</a>
                 </div>
             </div>
         </form>
