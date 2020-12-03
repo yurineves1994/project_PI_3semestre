@@ -1,6 +1,5 @@
 package br.senac.sp.dao;
 
-import br.senac.br.entidades.Clientes;
 import br.senac.br.entidades.Vendedor;
 import br.senac.br.servelet.ServletBD;
 import br.senac.sp.bd.ConexaoDB;

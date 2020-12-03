@@ -16,7 +16,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="<c:url value="/index.jsp"/>" <img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
+                <a href="<c:url value="/protegido/index.jsp"/>"/><img src="<c:url value="/img/logo.PNG"/>"/> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">LISTAR PRODUTO</h1>
@@ -28,7 +28,7 @@
                     <th>ID PRODUTO</th>
                     <th>NOME DO PRODUTO</th>
                     <th>PREÇO</th>
-                    <th>QUANTIDADE</th>
+                    <th>QUANTIDADE EM ESTOQUE</th>
                     <th>CATEGORIA</th>
                     <th>DESCRIÇÃO</th>
                         <c:if test="${sessionScope.usuario.admin}">
@@ -38,7 +38,7 @@
             </thead>
             <tbody>
                 <c:forEach items="${listaProdutos}" var="produto">
-                    <tr>
+                    <tr style="text-align: center">
                         <td>${produto.id_produto}</td>
                         <td>${produto.nomeProduto}</td>
                         <td>${produto.precoProduto}</td>

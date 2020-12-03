@@ -17,6 +17,15 @@ public class Relatorios {
     public Relatorios() {
     }
 
+    public Relatorios(String categoria_produto, Integer id_venda, String cliente, String vendedor, Integer qtdVenda, Date data_venda) {
+        this.cliente = cliente;
+        this.vendedor = vendedor;
+        this.categoria_produto = categoria_produto;
+        this.id_venda = id_venda;
+        this.qtdVenda = qtdVenda;
+        this.data_venda = data_venda;
+    }
+    
     public Relatorios(String filial, Integer id_venda, String cliente, String vendedor, String produto, Date data_venda) {
         this.cliente = cliente;
         this.vendedor = vendedor;
@@ -33,20 +42,32 @@ public class Relatorios {
         this.data_venda = data_venda;
     }
 
-    public Relatorios(Integer id_relatorio, String cliente, String vendedor, String produto, Integer qtdVenda, Date data_venda) {
-        this.id_relatorio = id_relatorio;
-        this.cliente = cliente;
+    public Relatorios(String filial, Integer id_venda, String cliente, String vendedor, String produto, Integer qtdVenda, Date data_venda) {
         this.vendedor = vendedor;
         this.produto = produto;
+        this.cliente = cliente;
+        this.id_venda = id_venda;
+        this.filial = filial;
         this.qtdVenda = qtdVenda;
         this.data_venda = data_venda;
     }
+    
+//
+//    public Relatorios(Integer id_relatorio, String cliente, String vendedor, String produto, Integer qtdVenda, Date data_venda) {
+//        this.id_relatorio = id_relatorio;
+//        this.cliente = cliente;
+//        this.vendedor = vendedor;
+//        this.produto = produto;
+//        this.qtdVenda = qtdVenda;
+//        this.data_venda = data_venda;
+//    }
 
-    public Relatorios(Integer venda, String produto, String cliente, String vendedor, Date data_venda) {
+    public Relatorios(Integer venda, String produto, String cliente, String vendedor, Integer qtdVenda, Date data_venda) {
         this.id_relatorio = venda;
         this.produto = produto;
         this.cliente = cliente;
         this.vendedor = vendedor;
+        this.qtdVenda = qtdVenda;
         this.data_venda = data_venda;
     }
     

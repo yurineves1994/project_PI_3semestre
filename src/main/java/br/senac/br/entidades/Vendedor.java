@@ -1,5 +1,7 @@
 package br.senac.br.entidades;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+
 public class Vendedor {
 
     private String nome_vendedor;
@@ -15,6 +17,7 @@ public class Vendedor {
 
     ;
 
+    
     public Vendedor(String nome_vendedor, Integer id_vendedor, String senha, String cargo, String filial, String departamento) {
         this.nome_vendedor = nome_vendedor;
         this.id_vendedor = id_vendedor;
@@ -51,7 +54,7 @@ public class Vendedor {
     public boolean isAdmin() {
         return this.cargo.equalsIgnoreCase("gerente");
     }
-    
+
     public String getUsuario() {
         return usuario;
     }

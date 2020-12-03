@@ -17,10 +17,10 @@
         
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="<c:url value="/index.jsp"/>"<img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
+                <a href="<c:url value="index.jsp"/>"/><img src="<c:url value="/img/logo.PNG"/>"/> </a>
             </div>
             <div class="col-6 mt-4">
-                <h1 class=" display-4 font-weight-bolder">CADASTRAR CLIENTE</h1>
+                <h1 class="display-4 font-weight-bolder">CADASTRAR CLIENTE</h1>
             </div>
         </div>
         <form class="container-fluid mt-5" action="<c:url value="/CadastrarCliente"/>" method="POST">
@@ -98,7 +98,7 @@
                             type="submit">CADASTRAR CLIENTE</button>
 
                     <a class="btn btn-lg btn-danger col-5 font-weight-bolder h4 pb-2 pt-2" 
-                       href="<c:url value="/index.jsp"/>">CANCELAR</a>
+                       href="<c:url value="index.jsp"/>">CANCELAR</a>
                 </div>
             </div>
         </form>

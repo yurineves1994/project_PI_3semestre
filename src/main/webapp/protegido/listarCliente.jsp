@@ -16,7 +16,7 @@ Author     : yurin
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="<c:url value="/index.jsp"/>" <img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
+                <a href="<c:url value="/protegido/index.jsp"/>"/><img src="<c:url value="/img/logo.PNG"/>"/> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-4 font-weight-bolder">LISTAR CLIENTE</h1>
@@ -24,7 +24,7 @@ Author     : yurin
         </div>
         <table class="table table-bordered mt-3 table-hover">
             <thead class="thead-dark">
-                <tr>
+                <tr style="text-align: center">
                     <th>ID CLIENTE</th>
                     <th>NOME</th>
                     <th>CPF</th>

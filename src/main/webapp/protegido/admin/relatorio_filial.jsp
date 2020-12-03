@@ -16,7 +16,7 @@
     <body>
         <div class="container-fluid row mt-5 justify-content-around">
             <div class="col-5 ">
-                <a href="<c:url value="/index.jsp"/>"<img class="" src="<c:url value="/img/logo.PNG"/>" alt=""> </a>
+                <a href="<c:url value="/protegido/index.jsp"/>"/><img class="" src="<c:url value="/img/logo.PNG"/>"> </a>
             </div>
             <div class="col-6 mt-4">
                 <h1 class=" display-5 font-weight-bolder">RELATORIO DE VENDA/FILIAL</h1>
@@ -27,8 +27,7 @@
                 <thead>
 
                     <tr>
-                        <th class="font-weight-bolder text-danger text-center h5">FILIAL</th>
-                        <th class="font-weight-bolder text-danger text-center h5">CLIENTE</th>
+                        <th class="font-weight-bolder text-danger text-center h5">FILIAL</th>                       
                         <th class="font-weight-bolder text-danger text-center h5">VENDEDOR</th>
                         <th class="font-weight-bolder text-danger text-center h5">PRODUTO</th>
                         <th class="font-weight-bolder text-danger text-center h5">QUANTIDADE</th>
@@ -39,7 +38,6 @@
                     <c:forEach items="${relatorioPorFilial}" var="relatorio">
                         <tr>
                             <td>${relatorio.filial}</td>
-                            <td>${relatorio.cliente}</td>
                             <td>${relatorio.vendedor}</td>
                             <td>${relatorio.produto}</td>
                             <td>${relatorio.qtdVenda}</td>
