@@ -2,11 +2,7 @@ package br.senac.br.servelet;
 
 import br.senac.br.entidades.Vendedor;
 import br.senac.sp.dao.FuncionarioDAO;
-import br.senac.sp.dao.ProdutoDAO;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +21,8 @@ public class LoginServlet extends HttpServlet {
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
 
-        Vendedor usuario = FuncionarioDAO.obterVendedor(login, senha);
-        if (usuario == null) {
+        Vendedor usuario = FuncionarioDAO.obterVendedor(login);
+        if (usuario == null || !usuario.ValidarSenha(senha)) {
             response.sendRedirect(request.getContextPath() +"/login.jsp?erro=UserNotFound");
         
         } else {

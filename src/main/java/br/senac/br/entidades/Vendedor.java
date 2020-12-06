@@ -15,8 +15,16 @@ public class Vendedor {
     public Vendedor() {
     }
 
-    ;
-
+    // Metodo para codificar //
+    public String codificarSenha(String senha){
+        return BCrypt.withDefaults().hashToString(12, senha.toCharArray());
+    }
+    
+    //verificar se a senha está correta
+    public boolean ValidarSenha(String senha){
+        BCrypt.Result response = BCrypt.verifyer().verify(senha.toCharArray(), this.getSenha());
+        return response.verified;
+    }
     
     public Vendedor(String nome_vendedor, Integer id_vendedor, String senha, String cargo, String filial, String departamento) {
         this.nome_vendedor = nome_vendedor;

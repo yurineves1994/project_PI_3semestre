@@ -29,6 +29,7 @@
 
                 <select name="id_cliente" class="form-control-lg col-8 ml-n5" type="text">
                     <c:forEach items="${listaClientes}" var="cliente">
+                        <option value="" select>Selecione o cliente</option>
                         <option value="${cliente.id_cliente}">${cliente.nome_cliente}</option>
                     </c:forEach>
                 </select> 
@@ -37,6 +38,7 @@
             <div class="form-group row justify-content-center">
                 <label class="col-4 align-self-center font-weight-bolder h3 text-danger mr-n5">NOME VENDEDOR</label>
                 <select class="form-control-lg col-8 ml-n5" name="id_vendedor" >
+                    <option value="" select>Selecione o vendedor</option>
                     <option value="1">Ian Procopio</option>
                     <option value="2">João Finasterido</option>
                     <option value="3">Pedro</option>
@@ -50,6 +52,7 @@
 
                     <select class="form-control-lg col-6" name="id_produto">
                         <c:forEach items="${listaProdutos}" var="produto">
+                            <option value="" select>Selecione o produto</option>
                             <option value="${produto.id_produto}">${produto.nomeProduto}</option>
                         </c:forEach>
                     </select>
