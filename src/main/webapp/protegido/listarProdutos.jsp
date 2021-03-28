@@ -49,7 +49,6 @@
                             <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="AlterarProduto?id_produto=${produto.id_produto}">ATUALIZAR</a></td>
                             <td><a class="btn btn-lg btn-danger font-weight-bolder h4 pb-2 pt-2" href="DeletarProduto?id_produto=${produto.id_produto}">EXCLUIR</a></td>
                         </c:if>
-
                     </tr>
                 </c:forEach>
             </tbody>

@@ -1,8 +1,6 @@
 package br.senac.br.servelet;
 
-import br.senac.br.entidades.Relatorios;
 import br.senac.br.entidades.Vendas;
-import br.senac.sp.dao.RelatoriosDAO;
 import br.senac.sp.dao.VendasDAO;
 import java.io.IOException;
 import java.sql.SQLException;
